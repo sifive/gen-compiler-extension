@@ -30,16 +30,17 @@ The script will:
 ├── gen_txt2csv.py                # Converts GCC output to CSV
 ├── merge_csv_multi_sort.py      # Merges multiple CSV files
 └── gcc-csv/                      # Output folder (auto-generated)
+```
 
 ## 🚀 Usage
 Run full processing (if gcc-csv/ doesn't exist):
 ```bash
 ./process_gcc_features.sh
-
+```
 Force full processing (even if output folder exists):
 ```bash
 ./process_gcc_features.sh --force
-
+```
 Result
 Individual version CSVs are stored in the ./gcc-csv folder
 
@@ -56,5 +57,5 @@ gcc-csv/
 ├── gcc-3.1.4.csv
 
 gcc-ext.csv    # Combined & sorted CSV of all versions
-
+```
 

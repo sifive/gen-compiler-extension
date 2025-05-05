@@ -1,4 +1,4 @@
-# GCC Toolchain Feature Extractor
+# GCC Toolchain Supported Extensions List Generator
 
 This project provides a script to automate the extraction and comparison of available `-march` options across different versions of the SiFive Freedom Tools RISC-V toolchain.
 
@@ -28,7 +28,7 @@ The script will:
 .
 ├── process_gcc_features.sh       # The main bash script
 ├── gen_txt2csv.py                # Converts GCC output to CSV
-├── merge_csv_multi_sort.py      # Merges multiple CSV files
+├── merge_csv_multi_sort.py       # Merges multiple CSV files
 └── gcc-csv/                      # Output folder (auto-generated)
 ```
 

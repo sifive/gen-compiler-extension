@@ -1,8 +1,8 @@
 #!/bin/bash
 
 base_module="sifive/freedom-tools/toolsuite"
-output_folder="./gcc-csv"
-output_merged="gcc-ext.csv"
+output_folder="./csv"
+output_merged="compiler-ext.csv"
 
 # Toolchain versions
 versions=(
@@ -43,12 +43,20 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
     output_file="$output_folder/gcc-$version.txt"
     if ! riscv64-unknown-elf-gcc -march=help > "$output_file"; then
       echo "[ERROR] GCC command failed for version $version"
-      continue
+    fi
+
+    output_file2="$output_folder/clang-$version.txt"
+    if ! riscv64-unknown-elf-clang --print-supported-extensions > "$output_file2"; then
+      echo "[ERROR] Clang command failed for version $version"
     fi
 
     output_csv="$output_folder/gcc-$version.csv"
     echo "[INFO] Successfully generated $output_file"
     python3 gen_txt2csv.py "$output_file" "$output_csv"
+
+    output_csv2="$output_folder/clang-$version.csv"
+    echo "[INFO] Successfully generated $output_file2"
+    python3 gen_clang_txt2csv.py "$output_file2" "$output_csv2"
   done
 else
   echo "📁 Output folder exists. Skipping processing and running merge only."
@@ -56,6 +64,6 @@ fi
 
 # Always run merge step
 echo "📦 Merging CSV files into $output_merged"
-python3 merge_csv_multi_sort.py "$output_folder"/*.csv "$output_merged"
+python3 merge_riscv_extensions.py -i csv/clang*.csv csv/gcc*.csv -o "$output_merged"
 echo "✅ Done."
 

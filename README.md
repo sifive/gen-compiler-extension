@@ -1,5 +1,8 @@
 # SiFive Toolchain Supported Extensions List Generator
 
+## TODO
+This README is out-dated and will be updated later
+
 This project provides a script to automate the extraction and comparison of available `-march` options across different versions of the SiFive Freedom Tools RISC-V toolchain.
 
 The script will:

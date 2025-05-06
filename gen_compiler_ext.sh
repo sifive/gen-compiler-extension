@@ -45,18 +45,18 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
       echo "[ERROR] GCC command failed for version $version"
     fi
 
-    output_file2="$output_folder/clang-$version.txt"
-    if ! riscv64-unknown-elf-clang --print-supported-extensions > "$output_file2"; then
-      echo "[ERROR] Clang command failed for version $version"
-    fi
-
     output_csv="$output_folder/gcc-$version.csv"
     echo "[INFO] Successfully generated $output_file"
     python3 gen_txt2csv.py "$output_file" "$output_csv"
 
-    output_csv2="$output_folder/clang-$version.csv"
-    echo "[INFO] Successfully generated $output_file2"
-    python3 gen_clang_txt2csv.py "$output_file2" "$output_csv2"
+    output_file="$output_folder/clang-$version.txt"
+    if ! riscv64-unknown-elf-clang --print-supported-extensions > "$output_file"; then
+      echo "[ERROR] Clang command failed for version $version"
+    fi
+
+    output_csv="$output_folder/clang-$version.csv"
+    echo "[INFO] Successfully generated $output_file"
+    python3 gen_txt2csv.py "$output_file" "$output_csv"
   done
 else
   echo "📁 Output folder exists. Skipping processing and running merge only."

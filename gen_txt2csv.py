@@ -33,7 +33,8 @@ def main():
     # Lines to skip that match patterns (header or empty lines)
     skip_patterns = [
         re.compile(r"^\s*$"),  # Empty lines
-        re.compile(r"^\s*Name\s+Version\s+Description\s*$")  # Header line
+        re.compile(r"^\s*Name\s+Version\s*$"),  # Header line of gcc
+        re.compile(r"^\s*Name\s+Version\s+Description\s*$")  # Header line of clang
     ]
 
     with open(input_file, "r", encoding="utf-8") as f:

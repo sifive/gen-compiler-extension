@@ -143,6 +143,7 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
     # Check if output file is empty or has minimal content
     if [ ! -s "$output_file" ] || [ $(wc -l < "$output_file") -lt 2 ]; then
       echo "[WARNING] GCC output file is empty or too small, skipping CSV generation"
+      rm $output_file
     else
       output_csv="$output_folder/gcc-$version.csv"
       echo "[INFO] Successfully generated $output_file"
@@ -157,6 +158,7 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
     # Check if output file is empty or has minimal content
     if [ ! -s "$output_file2" ] || [ $(wc -l < "$output_file2") -lt 2 ]; then
       echo "[WARNING] Clang output file is empty or too small, skipping CSV generation"
+      rm $output_file2
     else
       output_csv2="$output_folder/clang-$version.csv"
       echo "[INFO] Successfully generated $output_file2"

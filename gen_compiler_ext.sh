@@ -180,4 +180,7 @@ fi
 # Always run merge step
 echo "📦 Merging CSV files into $output_merged"
 python3 merge_riscv_extensions.py -i "$output_folder"/clang*.csv "$output_folder"/gcc*.csv -o "$output_merged" $no_description
+python3 gen_csv2xlsx.py -f -s -o compiler-ext.xlsx compiler-ext.csv
 echo "✅ Done."
+
+

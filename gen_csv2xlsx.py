@@ -136,13 +136,28 @@ def main():
     """Main function."""
     args = parse_arguments()
     
+    # Check if input file exists
+    if not os.path.isfile(args.input_csv):
+        print(f"Error: Input file '{args.input_csv}' does not exist")
+        return 1
+    
     # Set output file if not specified
     if not args.output:
         base_name = os.path.splitext(args.input_csv)[0]
         args.output = f"{base_name}.xlsx"
     
     # Load CSV data
-    df = pd.read_csv(args.input_csv)
+    try:
+        df = pd.read_csv(args.input_csv)
+    except pd.errors.EmptyDataError:
+        print(f"Error: Input file '{args.input_csv}' is empty")
+        return 1
+    except pd.errors.ParserError:
+        print(f"Error: Input file '{args.input_csv}' is not a valid CSV file")
+        return 1
+    except Exception as e:
+        print(f"Error reading CSV file: {str(e)}")
+        return 1
     
     print(f"Converting {args.input_csv} to {args.output}")
     print(f"Found {len(df)} extensions across {len(df.columns) - 2} compiler versions")
@@ -166,13 +181,7 @@ def main():
             apply_conditional_formatting(worksheet, data_start_col, len(df))
     
     print(f"✅ Successfully created {args.output}")
-    
-    # Print examples of how to use
-    print("\nUsage examples:")
-    print(f"  Basic conversion:            python csv_to_xlsx.py {args.input_csv}")
-    print(f"  With separate sheets:        python csv_to_xlsx.py {args.input_csv} --separate-sheets")
-    print(f"  Without freezing columns:    python csv_to_xlsx.py {args.input_csv} --freeze")
-    print(f"  Custom output:               python csv_to_xlsx.py {args.input_csv} -o custom_output.xlsx")
 
 if __name__ == "__main__":
-    main()
+    import sys
+    sys.exit(main())

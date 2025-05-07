@@ -113,15 +113,15 @@ compiler-ext.csv    # Combined & sorted CSV of all versions
 ```
 
 The merged CSV file includes columns for each toolchain version, showing whether each extension is supported ('Y') or not ('N').
----
 
+---
 
 ## 📊 Excel Conversion
 
-You can convert the generated CSV file to a formatted Excel spreadsheet using the included `csv_to_xlsx.py` script:
+You can convert the generated CSV file to a formatted Excel spreadsheet using the included `gen_csv2xlsx.py` script:
 
 ```bash
-python csv_to_xlsx.py compiler-ext.csv
+python gen_csv2xlsx.py compiler-ext.csv
 ```
 
 ### Excel Conversion Options
@@ -137,13 +137,13 @@ Options:
 
 ```bash
 # Basic conversion
-python csv_to_xlsx.py compiler-ext.csv
+python gen_csv2xlsx.py compiler-ext.csv
 
 # Create additional separate sheets for GCC and Clang
-python csv_to_xlsx.py compiler-ext.csv --separate-sheets
+python gen_csv2xlsx.py compiler-ext.csv --separate-sheets
 
 # Specify a custom output filename
-python csv_to_xlsx.py compiler-ext.csv -o risc-v-extensions.xlsx
+python gen_csv2xlsx.py compiler-ext.csv -o risc-v-extensions.xlsx
 ```
 
 ### Dependencies

@@ -113,5 +113,51 @@ compiler-ext.csv    # Combined & sorted CSV of all versions
 ```
 
 The merged CSV file includes columns for each toolchain version, showing whether each extension is supported ('Y') or not ('N').
+---
+
+
+## 📊 Excel Conversion
+
+You can convert the generated CSV file to a formatted Excel spreadsheet using the included `csv_to_xlsx.py` script:
+
+```bash
+python csv_to_xlsx.py compiler-ext.csv
+```
+
+### Excel Conversion Options
+
+```
+Options:
+  --output, -o FILE       Specify output XLSX filename
+  --freeze, -f            Freeze the first two columns (Name, Version)
+  --separate-sheets, -s   Create additional separate sheets for GCC and Clang
+```
+
+### Examples
+
+```bash
+# Basic conversion
+python csv_to_xlsx.py compiler-ext.csv
+
+# Create additional separate sheets for GCC and Clang
+python csv_to_xlsx.py compiler-ext.csv --separate-sheets
+
+# Specify a custom output filename
+python csv_to_xlsx.py compiler-ext.csv -o risc-v-extensions.xlsx
+```
+
+### Dependencies
+
+This script requires:
+- pandas
+- openpyxl
+
+You can install these with:
+
+```bash
+pip install pandas openpyxl
+```
+
+The Excel file will have conditional formatting with green highlighting for supported extensions ('Y') and red for unsupported ones ('N').
 
 

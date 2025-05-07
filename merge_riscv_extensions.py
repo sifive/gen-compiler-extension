@@ -41,7 +41,7 @@ def read_csv_file(filepath):
     
     return extensions
 
-def merge_csv_files(input_files, output_file):
+def merge_csv_files(input_files, output_file, include_description=True):
     """Merge multiple CSV files into one consolidated file."""
     all_extensions = {}
     file_sources = []
@@ -72,7 +72,12 @@ def merge_csv_files(input_files, output_file):
     
     # Write consolidated output
     with open(output_file, 'w', newline='', encoding='utf-8') as file:
-        headers = ['Name', 'Version', 'Description'] + file_sources
+        # Include or exclude the Description column based on the include_description flag
+        headers = ['Name', 'Version']
+        if include_description:
+            headers.append('Description')
+        headers.extend(file_sources)
+        
         writer = csv.writer(file)
         writer.writerow(headers)
         
@@ -84,9 +89,12 @@ def merge_csv_files(input_files, output_file):
             ext = all_extensions[key]
             row = [
                 ext['name'],
-                ext['version'],
-                ext['description']
+                ext['version']
             ]
+            
+            # Add description if needed
+            if include_description:
+                row.append(ext['description'])
             
             # Add Y/N for each source file
             for source in file_sources:
@@ -103,6 +111,8 @@ def main():
                         help='Input CSV files to merge (wildcards supported)')
     parser.add_argument('--output', '-o', required=True, 
                         help='Output CSV file path')
+    parser.add_argument('--no-description', action='store_true',
+                        help='Filter out description column in the output')
     
     args = parser.parse_args()
     
@@ -126,7 +136,8 @@ def main():
             return 1
     
     print(f"Processing {len(input_files)} input files")
-    merge_csv_files(input_files, args.output)
+    # Pass the include_description flag (negation of no-description)
+    merge_csv_files(input_files, args.output, not args.no_description)
     return 0
 
 if __name__ == "__main__":

@@ -15,6 +15,7 @@ show_help() {
   echo "  --clang-triple NAME     Use specific Clang triple name (default: riscv64-unknown-elf-clang)"
   echo "  --version VER           Process specific version only"
   echo "  --list-versions         List available versions and exit"
+  echo "  --no-description        Filter out description column in the merged output"
   echo ""
   echo "Examples:"
   echo "  ./gen_compiler_ext.sh"
@@ -22,6 +23,7 @@ show_help() {
   echo "  ./gen_compiler_ext.sh --output-dir ./my-reports"
   echo "  ./gen_compiler_ext.sh --gcc-triple riscv64-linux-gnu-gcc"
   echo "  ./gen_compiler_ext.sh --version 3.1.4"
+  echo "  ./gen_compiler_ext.sh --no-description"
 }
 
 base_module="sifive/freedom-tools/toolsuite"
@@ -30,6 +32,7 @@ output_merged="compiler-ext.csv"
 gcc_triple_name="riscv64-unknown-elf-gcc"
 clang_triple_name="riscv64-unknown-elf-clang"
 specific_version=""
+no_description=""
 
 # Toolchain versions
 versions=(
@@ -85,6 +88,10 @@ while [[ $# -gt 0 ]]; do
         echo "  $v"
       done
       exit 0
+      ;;
+    --no-description)
+      echo "📝 Description column will be filtered out from the merged output"
+      no_description="--no-description"
       ;;
     *)
       echo "Unknown option: $1"
@@ -172,6 +179,5 @@ fi
 
 # Always run merge step
 echo "📦 Merging CSV files into $output_merged"
-python3 merge_riscv_extensions.py -i "$output_folder"/clang*.csv "$output_folder"/gcc*.csv -o "$output_merged"
+python3 merge_riscv_extensions.py -i "$output_folder"/clang*.csv "$output_folder"/gcc*.csv -o "$output_merged" $no_description
 echo "✅ Done."
-

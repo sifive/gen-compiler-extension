@@ -60,6 +60,7 @@ Options:
   --clang-triple NAME     Use specific Clang triple name (default: riscv64-unknown-elf-clang)
   --version VER           Process specific version only
   --list-versions         List available versions and exit
+  --no-description       Filter out description column in the merged output
 ```
 
 ### Examples
@@ -87,6 +88,10 @@ Use a different GCC triple:
 List all available versions:
 ```bash
 ./gen_compiler_ext.sh --list-versions
+
+Filter out description column from output:
+```bash
+./gen_compiler_ext.sh --no-description
 ```
 
 ## 📦 Output Files
@@ -108,4 +113,5 @@ compiler-ext.csv    # Combined & sorted CSV of all versions
 ```
 
 The merged CSV file includes columns for each toolchain version, showing whether each extension is supported ('Y') or not ('N').
+
 

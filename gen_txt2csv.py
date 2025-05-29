@@ -20,12 +20,13 @@ def main():
     rows = [["Name", "Version", "Description"]]
 
     # Match pattern for name, version, and description
-    pattern = re.compile(r"^\s*(\S+(?:\s+\S+)*?)\s+(\S+)\s*(.*)$")
+    pattern = re.compile(r"^\s*(\S+(?:\s+\S+)*?)\s+(\S+(?:,\s*\S+)*)\s*(.*)$")
     
     # Lines to skip
     skip_lines = [
         "All available -march extensions for RISC-V",
-        "Experimental extensions",
+        "Experimental ",
+        "Supported ",
         "Use -march to specify the target's extension.",
         "For example, clang"
     ]
@@ -53,6 +54,11 @@ def main():
             if match:
                 name, version, description = match.groups()
                 
+                # Special handling for new GCC format
+                if version.endswith(',') and description.strip() and description.strip()[0].isdigit():
+                    version = version + description
+                    description = ""
+                
                 # If we have a version at the end but no description
                 if not description.strip() and ' ' in name:
                     # Try to extract version from the end of name
@@ -63,11 +69,19 @@ def main():
                             version = parts[-1]
                             name = ' '.join(parts[:-1])
                 
-                rows.append([name.strip(), version.strip(), description.strip()])
+                # Check if version contains comma-separated values
+                if ',' in version:
+                    # Split by comma and create a row for each version
+                    versions = [v.strip() for v in version.split(',')]
+                    for v in versions:
+                        if v:  # Skip empty versions
+                            rows.append([name.strip(), v, description.strip()])
+                else:
+                    rows.append([name.strip(), version.strip(), description.strip()])
             elif line:  # If line is not empty but didn't match the pattern
                 parts = line.split()
                 if len(parts) >= 2:
-                    # Simple fallback parsing (from gen_txt2csv.py)
+                    # Simple fallback parsing
                     version = parts[-1]
                     name = ' '.join(parts[:-1])
                     rows.append([name, version, ""])

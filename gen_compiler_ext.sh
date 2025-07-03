@@ -36,15 +36,10 @@ no_description=""
 
 # Toolchain versions
 versions=(
-  "1.0.6"
   "1.0.7"
   "2.0.3"
-  "3.0.0"
-  "3.1.0"
-  "3.1.2"
-  "3.1.3"
-  "3.1.4"
-  "4.0.0"
+  "3.1.5"
+  "4.0.2"
 )
 
 # Parse command line arguments

@@ -9,10 +9,15 @@ CLANG_COMPILER="riscv64-unknown-elf-clang"
 
 # Toolchain versions
 VERSIONS=(
+  "1.0.6"
   "1.0.7"
   "2.0.3"
+  "3.0.0"
+  "3.1.0"
+  "3.1.2"
+  "3.1.3"
+  "3.1.4"
   "3.1.5"
-  "4.0.2"
 )
 
 # Function to print usage information

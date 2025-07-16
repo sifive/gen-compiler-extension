@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Load toolchain configuration
+source "$(dirname "$0")/toolchain_config.sh"
+
 # Display help information
 show_help() {
   echo "Usage: ./gen_compiler_ext.sh [OPTIONS]"
@@ -11,8 +14,8 @@ show_help() {
   echo "  --force                 Force regeneration of all output files"
   echo "  --output-dir DIR        Set output directory (default: ./csv)"
   echo "  --merged-file FILE      Set merged output file name (default: compiler-ext.csv)"
-  echo "  --gcc-triple NAME       Use specific GCC triple name (default: riscv64-unknown-elf-gcc)"
-  echo "  --clang-triple NAME     Use specific Clang triple name (default: riscv64-unknown-elf-clang)"
+  echo "  --gcc-triple NAME       Use specific GCC triple name (default: $DEFAULT_GCC_TRIPLE)"
+  echo "  --clang-triple NAME     Use specific Clang triple name (default: $DEFAULT_CLANG_TRIPLE)"
   echo "  --version VER           Process specific version only"
   echo "  --list-versions         List available versions and exit"
   echo "  --no-description        Filter out description column in the merged output"
@@ -26,23 +29,15 @@ show_help() {
   echo "  ./gen_compiler_ext.sh --no-description"
 }
 
-base_module="sifive/freedom-tools/toolsuite"
 output_folder="./csv"
 output_merged="compiler-ext.csv"
-gcc_triple_name="riscv64-unknown-elf-gcc"
-clang_triple_name="riscv64-unknown-elf-clang"
+gcc_triple_name="$DEFAULT_GCC_TRIPLE"
+clang_triple_name="$DEFAULT_CLANG_TRIPLE"
 specific_version=""
 no_description=""
 
-# Toolchain versions
-versions=(
-  "1.0.7"
-  "2.0.3"
-  "3.1.5"
-  "4.0.0"
-  "4.0.1"
-  "4.0.2"
-)
+# Copy toolchain versions from config
+versions=("${TOOLCHAIN_VERSIONS[@]}")
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
@@ -81,10 +76,7 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     --list-versions)
-      echo "Available versions:"
-      for v in "${versions[@]}"; do
-        echo "  $v"
-      done
+      list_versions
       exit 0
       ;;
     --no-description)
@@ -102,20 +94,9 @@ done
 
 # Check if specific version is valid
 if [ -n "$specific_version" ]; then
-  version_found=0
-  for v in "${versions[@]}"; do
-    if [ "$v" == "$specific_version" ]; then
-      version_found=1
-      break
-    fi
-  done
-  
-  if [ $version_found -eq 0 ]; then
+  if ! is_valid_version "$specific_version"; then
     echo "Error: Version $specific_version not found in available versions."
-    echo "Available versions:"
-    for v in "${versions[@]}"; do
-      echo "  $v"
-    done
+    list_versions
     exit 1
   fi
   
@@ -134,9 +115,9 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
   for version in "${versions[@]}"; do
     echo "=== Processing version $version ==="
 
-    module unload "$base_module"
-    if ! module load "$base_module/$version"; then
-      echo "[ERROR] Failed to load module $base_module/$version"
+    module unload "$BASE_MODULE"
+    if ! module load "$BASE_MODULE/$version"; then
+      echo "[ERROR] Failed to load module $BASE_MODULE/$version"
       continue
     fi
 

@@ -1,12 +1,13 @@
-# SiFive Toolchain Supported Extensions List Generator
+# SiFive Toolchain Supported Extensions and MCPUs List Generator
 
-This project provides a script to automate the extraction and comparison of available RISC-V extensions across different versions of the SiFive Freedom Tools RISC-V toolchain.
+This project provides scripts to automate the extraction and comparison of available RISC-V extensions and supported MCPUs across different versions of the SiFive Freedom Tools RISC-V toolchain.
 
-The script will:
+The scripts will:
 1. Load each specified toolchain module.
-2. Run `riscv64-unknown-elf-gcc -march=help` and `riscv64-unknown-elf-clang --print-supported-extensions` to extract supported extensions.
+2. Extract supported extensions and MCPUs from GCC and Clang compilers.
 3. Convert the outputs to CSV format.
-4. Merge all CSVs into a combined, sorted output file showing which extensions are supported in each toolchain version.
+4. Merge all CSVs into combined, sorted output files showing which extensions/MCPUs are supported in each toolchain version.
+5. Generate Excel files with conditional formatting for easy visualization.
 
 ---
 
@@ -16,9 +17,12 @@ The script will:
 - `module` command (e.g., Lmod or Environment Modules)
 - Python 3
 - RISC-V toolchains available as modules
-- Two Python scripts in the same directory:
-  - `gen_txt2csv.py` — Converts GCC/Clang output to CSV
-  - `merge_riscv_extensions.py` — Merges all CSVs into one
+- Python dependencies: `pandas`, `openpyxl`
+
+Install Python dependencies:
+```bash
+pip install pandas openpyxl
+```
 
 ---
 
@@ -26,15 +30,23 @@ The script will:
 
 ```bash
 .
-├── gen_compiler_ext.sh         # The main bash script
+├── gen_compiler_ext.sh         # Extract RISC-V extensions
+├── gen_compiler_mcpu.sh        # Extract supported MCPUs
+├── toolchain_config.sh         # Shared toolchain configuration
 ├── gen_txt2csv.py              # Converts compiler output to CSV
 ├── merge_riscv_extensions.py   # Merges multiple CSV files
-└── csv/                        # Output folder (auto-generated)
+├── gen_csv2xlsx.py             # Converts CSV to Excel with formatting
+├── parse_mcpu_values.sh        # Extracts MCPU values from compilers
+├── mcpu_csv_to_excel.py        # Converts MCPU CSV to Excel
+├── csv/                        # Extensions output folder (auto-generated)
+└── mcpu_lists/                 # MCPU output folder (auto-generated)
 ```
 
-## 🚀 Usage
+---
 
-### Basic Usage
+## 🚀 RISC-V Extensions Analysis
+
+### Usage
 
 Run full processing (if csv/ doesn't exist):
 ```bash
@@ -47,8 +59,6 @@ Force full processing (even if output folder exists):
 ```
 
 ### Command Line Options
-
-The script supports several command-line options:
 
 ```
 Options:
@@ -72,7 +82,7 @@ Process all toolchain versions:
 
 Process a specific version only:
 ```bash
-./gen_compiler_ext.sh --version 3.1.4
+./gen_compiler_ext.sh --version 3.1.5
 ```
 
 Change the output directory:
@@ -80,84 +90,141 @@ Change the output directory:
 ./gen_compiler_ext.sh --output-dir ./my-reports
 ```
 
-Use a different GCC triple:
-```bash
-./gen_compiler_ext.sh --gcc-triple riscv64-linux-gnu-gcc
-```
-
 List all available versions:
 ```bash
 ./gen_compiler_ext.sh --list-versions
+```
 
 Filter out description column from output:
 ```bash
 ./gen_compiler_ext.sh --no-description
 ```
 
-## 📦 Output Files
+### Output Files
 
 After successful execution, you will get:
 
 ```bash
 csv/
-├── gcc-1.0.6.csv
 ├── gcc-1.0.7.csv
+├── gcc-2.0.3.csv
 ├── ...
-├── gcc-3.1.4.csv
-├── clang-1.0.6.csv
 ├── clang-1.0.7.csv
+├── clang-2.0.3.csv
 ├── ...
-└── clang-3.1.4.csv
-
-compiler-ext.csv    # Combined & sorted CSV of all versions
+└── compiler-ext.csv    # Combined & sorted CSV of all versions
+    compiler-ext.xlsx   # Excel version with conditional formatting
 ```
-
-The merged CSV file includes columns for each toolchain version, showing whether each extension is supported ('Y') or not ('N').
 
 ---
 
-## 📊 Excel Conversion
+## 🖥️ MCPU Analysis
 
-You can convert the generated CSV file to a formatted Excel spreadsheet using the included `gen_csv2xlsx.py` script:
+### Usage
 
+Run full processing:
 ```bash
-python gen_csv2xlsx.py compiler-ext.csv
+./gen_compiler_mcpu.sh
 ```
 
-### Excel Conversion Options
+Force regeneration of all files:
+```bash
+./gen_compiler_mcpu.sh --force
+```
+
+### Command Line Options
 
 ```
 Options:
-  --output, -o FILE       Specify output XLSX filename
-  --freeze, -f            Freeze the first two columns (Name, Version)
-  --separate-sheets, -s   Create additional separate sheets for GCC and Clang
+  -v, --verbose         Enable verbose output
+  -f, --force           Force processing even if CSV files already exist
+  -o, --output-dir DIR  Specify output directory (default: mcpu_lists)
+  -m, --module MODULE   Specify base module name (default: sifive/freedom-tools/toolsuite)
+  -h, --help            Show this help message
 ```
 
 ### Examples
 
+Process all toolchain versions with verbose output:
 ```bash
-# Basic conversion
-python gen_csv2xlsx.py compiler-ext.csv
-
-# Create additional separate sheets for GCC and Clang
-python gen_csv2xlsx.py compiler-ext.csv --separate-sheets
-
-# Specify a custom output filename
-python gen_csv2xlsx.py compiler-ext.csv -o risc-v-extensions.xlsx
+./gen_compiler_mcpu.sh --verbose
 ```
 
-### Dependencies
-
-This script requires:
-- pandas
-- openpyxl
-
-You can install these with:
-
+Change the output directory:
 ```bash
-pip install pandas openpyxl
+./gen_compiler_mcpu.sh --output-dir ./mcpu-reports
 ```
 
-The Excel file will have conditional formatting with green highlighting for supported extensions ('Y') and red for unsupported ones ('N').
+Force regeneration of existing files:
+```bash
+./gen_compiler_mcpu.sh --force
+```
+
+### Output Files
+
+After successful execution, you will get:
+
+```bash
+mcpu_lists/
+├── 1.0.7/
+│   ├── gcc_mcpu.csv
+│   ├── clang_mcpu.csv
+│   └── mcpu_list.csv
+├── 2.0.3/
+│   ├── gcc_mcpu.csv
+│   ├── clang_mcpu.csv
+│   └── mcpu_list.csv
+├── ...
+├── compiler-mcpu.csv   # Combined comparison across all versions
+└── compiler-mcpu.xlsx  # Excel version with conditional formatting
+```
+
+---
+
+## 📊 Excel Output Features
+
+Both scripts generate Excel files with the following features:
+
+- **Conditional Formatting**: Green highlighting for supported extensions/MCPUs ('Y' or 'X')
+- **Frozen Panes**: First row and column frozen for easy navigation
+- **Auto-sized Columns**: Columns automatically adjusted to content width
+- **Multiple Sheets**: Separate sheets for different data views (extensions only)
+
+### Manual Excel Conversion
+
+You can also convert CSV files to Excel manually:
+
+```bash
+# Convert extensions CSV
+python gen_csv2xlsx.py compiler-ext.csv --separate-sheets --freeze
+
+# Convert MCPU comparison CSV
+python mcpu_csv_to_excel.py -c mcpu_lists/compiler-mcpu.csv
+```
+
+---
+
+## 🔍 Supported Toolchain Versions
+
+Toolchain versions are configured in `toolchain_config.sh`. Current supported versions:
+- 1.0.7
+- 2.0.3
+- 3.1.5
+- 4.0.0
+- 4.0.1
+- 4.0.2
+- 4.0.3
+
+To add or modify versions, edit the `TOOLCHAIN_VERSIONS` array in `toolchain_config.sh`.
+
+---
+
+## 📝 Notes
+
+- The scripts automatically skip processing if output files already exist (use `--force` to override)
+- Module loading/unloading is handled automatically
+- Error handling is included for missing compilers or failed module loads
+- Both GCC and Clang outputs are processed and compared
+- Excel conversion requires `pandas` and `openpyxl` Python packages
 
 

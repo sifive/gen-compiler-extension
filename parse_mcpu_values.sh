@@ -3,12 +3,14 @@
 # Default configuration
 OUTPUT_FILE="mcpu_list.csv"
 VERBOSE=0
+DUMP_MODE=0
 COMPILERS=("riscv64-unknown-elf-gcc" "riscv64-unknown-elf-clang")
 
 # Function to print usage information
 print_usage() {
-    echo "Usage: $0 [-v|--verbose] [-o|--output FILE] [-c|--compiler COMPILER]"
+    echo "Usage: $0 [-v|--verbose] [-d|--dump] [-o|--output FILE] [-c|--compiler COMPILER]"
     echo "  -v, --verbose         Enable verbose output"
+    echo "  -d, --dump            Dump mcpu list without saving to CSV"
     echo "  -o, --output FILE     Specify output CSV file (default: gcc_mcpu_values.csv)"
     echo "  -c, --compiler COMP   Specify compiler to extract mcpu values from"
     echo "                        Can be specified multiple times for multiple compilers"
@@ -42,6 +44,10 @@ parse_arguments() {
             -h|--help)
                 print_usage
                 exit 0
+                ;;
+            -d|--dump)
+                DUMP_MODE=1
+                shift
                 ;;
             *)
                 echo "Unknown option: $1"

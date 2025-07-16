@@ -1,289 +1,289 @@
-Name,Version,Description,clang-2.0.3,clang-3.1.5,clang-4.0.2,gcc-1.0.7,gcc-2.0.3,gcc-3.1.5,gcc-4.0.2
-a,2.0,,N,N,N,Y,Y,Y,Y
-a,2.1,'A' (Atomic Instructions),Y,Y,Y,Y,Y,Y,Y
-b,1.0,"'B' (the collection of the Zba, Zbb, Zbs extensions)",N,Y,Y,N,N,Y,Y
-c,2.0,'C' (Compressed Instructions),Y,Y,Y,Y,Y,Y,Y
-d,2.0,,N,N,N,Y,Y,Y,Y
-d,2.2,'D' (Double-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y
-e,1.9,,N,N,N,Y,Y,Y,Y
-e,2.0,"Implements RV{32,64}E (provides 16 rather than 32 GPRs)",Y,Y,Y,Y,Y,Y,Y
-f,2.0,,N,N,N,Y,Y,Y,Y
-f,2.2,'F' (Single-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y
-h,1.0,'H' (Hypervisor),Y,Y,Y,Y,Y,Y,Y
-i,2.0,,N,N,N,Y,Y,Y,Y
-i,2.1,'I' (Base Integer Instruction Set),Y,Y,Y,Y,Y,Y,Y
-m,2.0,'M' (Integer Multiplication and Division),Y,Y,Y,Y,Y,Y,Y
-sdext,1.0,'Sdext' (External Debugging Extension),Y,Y,Y,Y,Y,Y,Y
-sdtrig,1.0,'Sdtrig' (Debugging Triggers),Y,Y,Y,Y,Y,Y,Y
-sha,1.0,'Sha' (Augmented Hypervisor),N,N,Y,N,N,N,N
-shcounterenw,1.0,'Shcounterenw' (Support writeable hcounteren enable bit for any hpmcounter that is not read-only zero),Y,Y,Y,Y,Y,Y,Y
-shgatpa,1.0,"'Sgatpa' (SvNNx4 mode supported for all modes supported by satp, as well as Bare)",Y,Y,Y,Y,Y,Y,Y
-shtvala,1.0,'Shtvala' (htval provides all needed values),Y,Y,Y,Y,Y,Y,Y
-shvsatpa,1.0,'Svsatpa' (vsatp supports all modes supported by satp),Y,Y,Y,Y,Y,Y,Y
-shvstvala,1.0,'Shvstvala' (vstval provides all needed values),Y,Y,Y,Y,Y,Y,Y
-shvstvecd,1.0,'Shvstvecd' (vstvec supports Direct mode),Y,Y,Y,Y,Y,Y,Y
-smaia,1.0,'Smaia' (Advanced Interrupt Architecture Machine Level),Y,Y,Y,Y,Y,Y,Y
-smcdeleg,1.0,'Smcdeleg' (Counter Delegation Machine Level),N,N,Y,N,N,N,N
-smcsrind,1.0,'Smcsrind' (Indirect CSR Access Machine Level),N,Y,Y,N,N,Y,Y
-smctr,1.0,'Smctr' (Control Transfer Records Machine Level),N,Y,Y,N,N,Y,Y
-smdbltrp,1.0,'Smdbltrp' (Double Trap Machine Level),N,N,Y,N,N,N,N
-smepmp,1.0,'Smepmp' (Enhanced Physical Memory Protection),Y,Y,Y,Y,Y,Y,Y
-smmpm,0.8,'Smmpm' (Machine-level Pointer Masking for M-mode),Y,N,N,Y,Y,N,N
-smmpm,1.0,'Smmpm' (Machine-level Pointer Masking for M-mode),N,Y,Y,N,N,Y,Y
-smnpm,0.8,'Smnpm' (Machine-level Pointer Masking for next lower privilege mode),Y,N,N,Y,Y,N,N
-smnpm,1.0,'Smnpm' (Machine-level Pointer Masking for next lower privilege mode),N,Y,Y,N,N,Y,Y
-smrnmi,0.5,'Smrnmi' (Resumable Non-Maskable Interrupts),Y,N,N,N,Y,N,N
-smrnmi,1.0,'Smrnmi' (Resumable Non-Maskable Interrupts),N,Y,Y,N,N,Y,Y
-smstateen,1.0,'Smstateen' (Machine-mode view of the state-enable extension.),Y,Y,Y,Y,Y,Y,Y
-smwg,0.3,"'Smwg' (The Smwg extension adds the mlwid CSR, which is an M-mode read-write CSR, whose least-significant bits set the WID to be used by lower-privilege modes.)",Y,Y,Y,Y,Y,Y,Y
-smwgd,0.3,'Smwgd' (The Smwgd extension adds the mwiddeleg M-mode read-write CSR. The mwiddeleg register represents a set of WIDs as a bit vector with WID i represented by bit i of the register.),Y,Y,Y,Y,Y,Y,Y
-ss,1.12,'Ss' (Supervisor Architecture),Y,Y,Y,Y,Y,Y,Y
-ss,1.13,'Ss' (Supervisor Architecture),Y,Y,Y,Y,Y,Y,Y
-ssaia,1.0,'Ssaia' (Advanced Interrupt Architecture Supervisor Level),Y,Y,Y,Y,Y,Y,Y
-ssccfg,1.0,'Ssccfg' (Counter Configuration Supervisor Level),N,N,Y,N,N,N,N
-ssccptr,1.0,'Ssccptr' (Main memory supports page table reads),Y,Y,Y,Y,Y,Y,Y
-sscofpmf,1.0,'Sscofpmf' (Count Overflow and Mode-Based Filtering Architecture extension),Y,Y,Y,Y,Y,Y,Y
-sscounterenw,1.0,'Sscounterenw' (Support writeable scounteren enable bit for any hpmcounter that is not read-only zero),Y,Y,Y,Y,Y,Y,Y
-sscsrind,1.0,'Sscsrind' (Indirect CSR Access Supervisor Level),N,Y,Y,N,N,Y,Y
-ssctr,1.0,'Ssctr' (Control Transfer Records Supervisor Level),N,Y,Y,N,N,Y,Y
-ssdbltrp,1.0,'Ssdbltrp' (Double Trap Supervisor Level),N,N,Y,N,N,N,N
-ssnpm,0.8,'Ssnpm' (Supervisor-level Pointer Masking for next lower privilege mode),Y,N,N,Y,Y,N,N
-ssnpm,1.0,'Ssnpm' (Supervisor-level Pointer Masking for next lower privilege mode),N,Y,Y,N,N,Y,Y
-sspm,0.8,'Sspm' (Indicates Supervisor-mode Pointer Masking),Y,N,N,Y,Y,N,N
-sspm,1.0,'Sspm' (Indicates Supervisor-mode Pointer Masking),N,Y,Y,N,N,Y,Y
-ssqosid,1.0,'Ssqosid' (Quality-of-Service (QoS) Identifiers),Y,Y,Y,Y,Y,Y,Y
-ssstateen,1.0,'Ssstateen' (Supervisor-mode view of the state-enable extension),Y,Y,Y,Y,Y,Y,Y
-ssstrict,1.0,'Ssstrict' (No non-conforming extensions are present),Y,Y,Y,Y,Y,Y,Y
-sstc,1.0,'Sstc' (Supervisor-mode timer interrupts),Y,Y,Y,Y,Y,Y,Y
-sstvala,1.0,'Sstvala' (stval provides all needed values),Y,Y,Y,Y,Y,Y,Y
-sstvecd,1.0,'Sstvecd' (stvec supports Direct mode),Y,Y,Y,Y,Y,Y,Y
-ssu64xl,1.0,'Ssu64xl' (UXLEN=64 supported),Y,Y,Y,Y,Y,Y,Y
-sswg,0.3,"'Sswg' (The Sswg extension adds the [H]S-mode read-write slwid CSR, which sets the WID used for modes lower than [H]S-mode.)",Y,Y,Y,Y,Y,Y,Y
-supm,0.8,'Supm' (Indicates User-mode Pointer Masking),Y,N,N,Y,Y,N,N
-supm,1.0,'Supm' (Indicates User-mode Pointer Masking),N,Y,Y,N,N,Y,Y
-sv39,1.12,,N,N,N,Y,Y,Y,Y
-sv48,1.12,,N,N,N,Y,Y,Y,Y
-sv57,1.12,,N,N,N,Y,Y,Y,Y
-svade,1.0,'Svade' (Raise exceptions on improper A/D bits),Y,Y,Y,Y,Y,Y,Y
-svadu,1.0,'Svadu' (Hardware A/D updates),Y,Y,Y,Y,Y,Y,Y
-svbare,1.0,'Svbare' $(satp mode Bare supported),Y,Y,Y,Y,Y,Y,Y
-svinval,1.0,'Svinval' (Fine-Grained Address-Translation Cache Invalidation),Y,Y,Y,Y,Y,Y,Y
-svnapot,1.0,'Svnapot' (NAPOT Translation Contiguity),Y,Y,Y,Y,Y,Y,Y
-svpbmt,1.0,'Svpbmt' (Page-Based Memory Types),Y,Y,Y,Y,Y,Y,Y
-svptead,1.0,,N,N,N,Y,Y,Y,Y
-svukte,0.4,'Svukte' (Address-Independent Latency of User-Mode Faults to Supervisor Addresses),N,Y,Y,N,N,Y,Y
-svvptc,1.0,'Svvptc' (Obviating Memory-Management Instructions after Marking PTEs Valid),N,N,Y,N,N,N,N
-v,0.10,,N,N,N,Y,Y,Y,Y
-v,1.0,'V' (Vector Extension for Application Processors),Y,Y,Y,Y,Y,Y,Y
-xcvalu,1.0,'XCValu' (CORE-V ALU Operations),Y,Y,Y,N,N,N,Y
-xcvbi,1.0,'XCVbi' (CORE-V Immediate Branching),Y,Y,Y,N,N,N,Y
-xcvbitmanip,1.0,'XCVbitmanip' (CORE-V Bit Manipulation),Y,Y,Y,N,N,N,N
-xcvelw,1.0,'XCVelw' (CORE-V Event Load Word),Y,Y,Y,N,N,N,Y
-xcvmac,1.0,'XCVmac' (CORE-V Multiply-Accumulate),Y,Y,Y,N,N,N,Y
-xcvmem,1.0,'XCVmem' (CORE-V Post-incrementing Load & Store),Y,Y,Y,N,N,N,N
-xcvsimd,1.0,'XCVsimd' (CORE-V SIMD ALU),Y,Y,Y,N,N,N,Y
-xqcia,0.2,'Xqcia' (Qualcomm uC Arithmetic Extension),N,N,Y,N,N,N,N
-xqciac,0.2,'Xqciac' (Qualcomm uC Load-Store Address Calculation Extension),N,N,Y,N,N,N,N
-xqcicli,0.2,'Xqcicli' (Qualcomm uC Conditional Load Immediate Extension),N,N,Y,N,N,N,N
-xqcicm,0.2,'Xqcicm' (Qualcomm uC Conditional Move Extension),N,N,Y,N,N,N,N
-xqcics,0.2,'Xqcics' (Qualcomm uC Conditional Select Extension),N,N,Y,N,N,N,N
-xqcicsr,0.2,'Xqcicsr' (Qualcomm uC CSR Extension),N,N,Y,N,N,N,N
-xqciint,0.2,'Xqciint' (Qualcomm uC Interrupts Extension),N,N,Y,N,N,N,N
-xqcilo,0.2,'Xqcilo' (Qualcomm uC Large Offset Load Store Extension),N,N,Y,N,N,N,N
-xqcilsm,0.2,'Xqcilsm' (Qualcomm uC Load Store Multiple Extension),N,N,Y,N,N,N,N
-xqcisls,0.2,'Xqcisls' (Qualcomm uC Scaled Load Store Extension),N,N,Y,N,N,N,N
-xsfcease,0.1,'XSfcease' (SiFive sf.cease Instruction),N,Y,Y,N,N,Y,Y
-xsfcease,1.0,'XSfcease' (SiFive sf.cease Instruction),N,Y,Y,N,N,Y,Y
-xsfmm128t,0.6,'XSfmm128t' TE=128 configuration,N,Y,Y,N,N,Y,Y
-xsfmm16t,0.6,'XSfmm16t' TE=16 configuration,N,Y,Y,N,N,Y,Y
-xsfmm32a,0.6,"'XSfmm32a' (TEW=32-bit accumulation) operands - int: 8b; float: fp16, bf16, fp32",N,Y,Y,N,N,Y,Y
-xsfmm32a16f,0.6,"'XSfmm32a16f' (TEW=32-bit accumulation) operands - float: 16b, widen=2 (IEEE, BF)",N,Y,Y,N,N,Y,Y
-xsfmm32a32f,0.6,'XSfmm32a32f' (TEW=32-bit accumulation) operands - float: 32b,N,Y,Y,N,N,Y,Y
-xsfmm32a4i,0.6,'XSfmm32a4i' (TEW=32-bit accumulation) operands - int: 4b (packed),N,Y,N,N,N,Y,Y
-xsfmm32a8f,0.6,'XSfmm32a8f' (TEW=32-bit accumulation) operands - float: fp8,N,Y,Y,N,N,Y,Y
-xsfmm32a8i,0.6,'XSfmm32a8i' (TEW=32-bit accumulation) operands - int: 8b,N,Y,Y,N,N,Y,Y
-xsfmm32ea,0.6,"'XSfmm32ea' (TEW=32-bit accumulation) instructions: sf.vset*, sf.vtmv*, sf.mm.f.f (SEW=32), sf.vtzero",N,Y,N,N,N,Y,N
-xsfmm32t,0.6,'XSfmm32t' TE=32 configuration,N,Y,Y,N,N,Y,Y
-xsfmm64a64f,0.6,'XSfmm64a64f' (TEW=64-bit accumulation) operands - float: fp64,N,Y,Y,N,N,Y,Y
-xsfmm64t,0.6,'XSfmm64t' TE=64 configuration,N,Y,Y,N,N,Y,Y
-xsfmmbase,0.6,'XSfmmbase' All non arithmetic instructions for all TEWs and sf.vtzero,N,Y,Y,N,N,Y,Y
-xsfpgflushdlone,0.1,'XSfpgflushdlone' (Cache Flush/Power Down Instructions),Y,Y,Y,Y,Y,Y,Y
-xsfpmpmt,0.1,'Xsfpmpmt' (SiFive PMP-based Memory Types Extension),N,Y,Y,N,N,Y,Y
-xsfsci,1.0,'XSfsci' (SiFive Custom Scalar Coprocessor Interface Instructions),N,Y,Y,N,N,Y,Y
-xsfvcp,0.1,,N,N,N,Y,Y,Y,Y
-xsfvcp,1.0,'XSfvcp' (SiFive Custom Vector Coprocessor Interface Instructions),Y,Y,Y,Y,Y,Y,Y
-xsfvfbfa,0.1,'XSfvfbfa' (SiFive custom additional BF16 vector compute support),N,Y,Y,N,N,Y,Y
-xsfvfbfexp16e,0.1,"'Xsfvfbfexp16e' (SiFive Vector Floating-Point Exponential Function Instruction, BFloat16)",N,Y,Y,N,N,Y,Y
-xsfvfexp16e,0.1,"'Xsfvfexp16e' (SiFive Vector Floating-Point Exponential Function Instruction, Half Precision)",N,Y,Y,N,N,Y,Y
-xsfvfexp32e,0.1,"'Xsfvfexp32e' (SiFive Vector Floating-Point Exponential Function Instruction, Single Precision)",N,Y,Y,N,N,Y,Y
-xsfvfexpa,0.2,'Xsfvfexpa' (SiFive Vector Floating-Point Exponential Approximation Instruction),N,Y,Y,N,N,Y,Y
-xsfvfexpa64e,0.2,'Xsfvfexpa64e' (SiFive Vector Floating-Point Exponential Approximation Instruction with Double-Precision),N,Y,Y,N,N,Y,Y
-xsfvfhbfmin,0.1,'Xsfvfhbfmin' (SiFive custom minimal BF16 vector support),Y,Y,Y,Y,Y,Y,Y
-xsfvfnrclipxfqf,0.1,'XSfvfnrclipxfqf' (SiFive FP32-to-int8 Ranged Clip Instructions),Y,Y,Y,Y,Y,Y,Y
-xsfvfnrclipxfqf,1.0,'XSfvfnrclipxfqf' (SiFive FP32-to-int8 Ranged Clip Instructions),Y,Y,Y,Y,Y,Y,Y
-xsfvfwmaccqqq,0.1,'XSfvfwmaccqqq' (SiFive Matrix Multiply Accumulate Instruction and 4-by-4)),Y,Y,Y,Y,Y,Y,Y
-xsfvfwmaccqqq,1.0,'XSfvfwmaccqqq' (SiFive Matrix Multiply Accumulate Instruction and 4-by-4)),Y,Y,Y,Y,Y,Y,Y
-xsfvqdotq,0.1,'Xsfvqdotq' (SiFive Vector Quad-Widening 4D Dot Product Instructions),Y,Y,Y,Y,Y,Y,Y
-xsfvqmaccdod,0.1,'XSfvqmaccdod' (SiFive Int8 Matrix Multiplication Instructions (2-by-8 and 8-by-2)),Y,Y,Y,Y,Y,Y,Y
-xsfvqmaccdod,1.0,'XSfvqmaccdod' (SiFive Int8 Matrix Multiplication Instructions (2-by-8 and 8-by-2)),Y,Y,Y,Y,Y,Y,Y
-xsfvqmaccqoq,0.1,'XSfvqmaccqoq' (SiFive Int8 Matrix Multiplication Instructions (4-by-8 and 8-by-4)),Y,Y,Y,Y,Y,Y,Y
-xsfvqmaccqoq,1.0,'XSfvqmaccqoq' (SiFive Int8 Matrix Multiplication Instructions (4-by-8 and 8-by-4)),Y,Y,Y,Y,Y,Y,Y
-xsifivecdiscarddlone,0.1,'XSiFivecdiscarddlone' (SiFive sf.cdiscard.d.l1 Instruction),N,Y,Y,N,N,N,Y
-xsifivecdiscarddlone,1.0,'XSiFivecdiscarddlone' (SiFive sf.cdiscard.d.l1 Instruction),N,Y,Y,N,N,N,N
-xsifivecdiscarddlone0.1,'XSiFivecdiscarddlone',(Cache Flush/Power Down Instructions),Y,N,N,N,N,N,N
-xsifivecflushdlone,0.1,'XSiFivecflushdlone' (Cache Flush/Power Down Instructions),Y,Y,Y,Y,Y,Y,Y
-xsifivecflushdlone,1.0,'XSiFivecflushdlone' (SiFive sf.cflush.d.l1 Instruction),N,Y,Y,N,N,N,N
-xtheadba,1.0,'xtheadba' (T-Head address calculation instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadbb,1.0,'xtheadbb' (T-Head basic bit-manipulation instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadbs,1.0,'xtheadbs' (T-Head single-bit instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadcmo,1.0,'xtheadcmo' (T-Head cache management instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadcondmov,1.0,'xtheadcondmov' (T-Head conditional move instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadfmemidx,1.0,'xtheadfmemidx' (T-Head FP Indexed Memory Operations),Y,Y,Y,Y,Y,Y,Y
-xtheadfmv,1.0,,N,N,N,Y,Y,Y,Y
-xtheadint,1.0,,N,N,N,Y,Y,Y,Y
-xtheadmac,1.0,'xtheadmac' (T-Head Multiply-Accumulate Instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadmemidx,1.0,'xtheadmemidx' (T-Head Indexed Memory Operations),Y,Y,Y,Y,Y,Y,Y
-xtheadmempair,1.0,'xtheadmempair' (T-Head two-GPR Memory Operations),Y,Y,Y,Y,Y,Y,Y
-xtheadsync,1.0,'xtheadsync' (T-Head multicore synchronization instructions),Y,Y,Y,Y,Y,Y,Y
-xtheadvdot,1.0,'xtheadvdot' (T-Head Vector Extensions for Dot),Y,Y,Y,N,N,N,N
-xtheadvector,1.0,,N,N,N,N,N,N,Y
-xventanacondops,1.0,'XVentanaCondOps' (Ventana Conditional Ops),Y,Y,Y,N,N,N,Y
-xwchc,2.2,'Xwchc' (WCH/QingKe additional compressed opcodes),N,N,Y,N,N,N,N
-za128rs,1.0,'Za128rs' (Reservation Set Size of at Most 128 Bytes),Y,Y,Y,Y,Y,Y,Y
-za64rs,1.0,'Za64rs' (Reservation Set Size of at Most 64 Bytes),Y,Y,Y,Y,Y,Y,Y
-zaamo,0.2,'Zaamo' (Atomic Memory Operations),Y,Y,N,N,N,N,N
-zaamo,1.0,'Zaamo' (Atomic Memory Operations),N,N,Y,N,N,Y,Y
-zabha,1.0,'Zabha' (Byte and Halfword Atomic Memory Operations),Y,Y,Y,N,N,N,N
-zacas,1.0,'Zacas' (Atomic Compare-And-Swap Instructions),Y,Y,Y,Y,Y,Y,Y
-zalasr,0.1,'Zalasr' (Load-Acquire and Store-Release Instructions),Y,Y,Y,N,N,N,N
-zalasr,1.0,,N,N,N,N,N,N,Y
-zalrsc,0.2,'Zalrsc' (Load-Reserved/Store-Conditional),Y,Y,N,N,N,N,N
-zalrsc,1.0,'Zalrsc' (Load-Reserved/Store-Conditional),N,N,Y,N,N,Y,Y
-zama16b,1.0,"'Zama16b' (Atomic 16-byte misaligned loads, stores and AMOs)",Y,Y,Y,N,Y,Y,Y
-zawrs,1.0,'Zawrs' (Wait on Reservation Set),Y,Y,Y,Y,Y,Y,Y
-zba,0.93,,N,N,N,Y,Y,Y,Y
-zba,1.0,'Zba' (Address Generation Instructions),Y,Y,Y,Y,Y,Y,Y
-zbb,0.93,,N,N,N,Y,Y,Y,Y
-zbb,1.0,'Zbb' (Basic Bit-Manipulation),Y,Y,Y,Y,Y,Y,Y
-zbc,1.0,'Zbc' (Carry-Less Multiplication),Y,Y,Y,Y,Y,Y,Y
-zbkb,1.0,'Zbkb' (Bitmanip instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y
-zbkc,1.0,'Zbkc' (Carry-less multiply instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y
-zbkx,1.0,'Zbkx' (Crossbar permutation instructions),Y,Y,Y,Y,Y,Y,Y
-zbs,1.0,'Zbs' (Single-Bit Instructions),Y,Y,Y,Y,Y,Y,Y
-zca,1.0,"'Zca' (part of the C extension, excluding compressed floating point loads/stores)",Y,Y,Y,Y,Y,Y,Y
-zcb,1.0,'Zcb' (Compressed basic bit manipulation instructions),Y,Y,Y,Y,Y,Y,Y
-zcd,1.0,'Zcd' (Compressed Double-Precision Floating-Point Instructions),Y,Y,Y,Y,Y,Y,Y
-zce,1.0,'Zce' (Compressed extensions for microcontrollers),Y,Y,Y,Y,Y,Y,Y
-zcf,1.0,'Zcf' (Compressed Single-Precision Floating-Point Instructions),Y,Y,Y,Y,Y,Y,Y
-zclsd,1.0,,N,N,N,N,N,N,Y
-zcmop,1.0,'Zcmop' (Compressed May-Be-Operations),Y,Y,Y,N,Y,Y,Y
-zcmp,1.0,'Zcmp' (sequenced instuctions for code-size reduction),Y,Y,Y,Y,Y,Y,Y
-zcmt,1.0,'Zcmt' (table jump instuctions for code-size reduction),Y,Y,Y,Y,Y,Y,Y
-zdinx,1.0,'Zdinx' (Double in Integer),Y,Y,Y,Y,Y,Y,Y
-zfa,0.1,,N,N,N,Y,N,N,N
-zfa,0.2,,N,N,N,Y,Y,Y,Y
-zfa,1.0,'Zfa' (Additional Floating-Point),Y,Y,Y,Y,Y,Y,Y
-zfbfmin,0.8,,N,N,N,Y,Y,Y,Y
-zfbfmin,1.0,'Zfbfmin' (Scalar BF16 Converts),Y,Y,Y,Y,Y,Y,Y
-zfh,1.0,'Zfh' (Half-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y
-zfhmin,1.0,'Zfhmin' (Half-Precision Floating-Point Minimal),Y,Y,Y,Y,Y,Y,Y
-zfinx,1.0,'Zfinx' (Float in Integer),Y,Y,Y,Y,Y,Y,Y
-zhinx,1.0,'Zhinx' (Half Float in Integer),Y,Y,Y,Y,Y,Y,Y
-zhinxmin,1.0,'Zhinxmin' (Half Float in Integer Minimal),Y,Y,Y,Y,Y,Y,Y
-zibi,0.1,'Zibi' (Branch with Immediate),N,N,Y,N,N,N,N
-zic64b,1.0,'Zic64b' (Cache Block Size Is 64 Bytes),Y,Y,Y,Y,Y,Y,Y
-zicbom,1.0,'Zicbom' (Cache-Block Management Instructions),Y,Y,Y,Y,Y,Y,Y
-zicbop,1.0,'Zicbop' (Cache-Block Prefetch Instructions),Y,Y,Y,Y,Y,Y,Y
-zicboz,1.0,'Zicboz' (Cache-Block Zero Instructions),Y,Y,Y,Y,Y,Y,Y
-ziccamoa,1.0,'Ziccamoa' (Main Memory Supports All Atomics in A),Y,Y,Y,Y,Y,Y,Y
-ziccif,1.0,'Ziccif' (Main Memory Supports Instruction Fetch with Atomicity Requirement),Y,Y,Y,Y,Y,Y,Y
-zicclsm,1.0,'Zicclsm' (Main Memory Supports Misaligned Loads/Stores),Y,Y,Y,Y,Y,Y,Y
-ziccrse,1.0,'Ziccrse' (Main Memory Supports Forward Progress on LR/SC Sequences),Y,Y,Y,Y,Y,Y,Y
-zicfilp,0.2,,N,N,N,Y,N,N,N
-zicfilp,0.4,'Zicfilp' (Landing pad),Y,N,N,N,N,N,N
-zicfilp,1.0,'Zicfilp' (Landing pad),N,Y,Y,N,Y,Y,Y
-zicfiss,0.2,,N,N,N,Y,N,N,N
-zicfiss,0.4,'Zicfiss' (Shadow stack),Y,N,N,N,N,N,N
-zicfiss,1.0,'Zicfiss' (Shadow stack),N,Y,Y,N,Y,Y,Y
-zicntr,1.0,,N,N,N,Y,Y,Y,N
-zicntr,2.0,'Zicntr' (Base Counters and Timers),Y,Y,Y,N,Y,Y,Y
-zicond,1.0,'Zicond' (Integer Conditional Operations),Y,Y,Y,Y,Y,Y,Y
-zicsr,2.0,'zicsr' (CSRs),Y,Y,Y,Y,Y,Y,Y
-zifencei,2.0,'Zifencei' (fence.i),Y,Y,Y,Y,Y,Y,Y
-zihintntl,1.0,'Zihintntl' (Non-Temporal Locality Hints),Y,Y,Y,Y,Y,Y,Y
-zihintpause,1.0,,N,N,N,Y,Y,Y,N
-zihintpause,2.0,'Zihintpause' (Pause Hint),Y,Y,Y,Y,Y,Y,Y
-zihpm,1.0,,N,N,N,Y,Y,Y,N
-zihpm,2.0,'Zihpm' (Hardware Performance Counters),Y,Y,Y,N,Y,Y,Y
-zilsd,1.0,,N,N,N,N,N,N,Y
-zimop,1.0,'Zimop' (May-Be-Operations),Y,Y,Y,N,Y,Y,Y
-zjid,0.0,'Zjid' (Instruction/Data Cache Synchronization),Y,Y,Y,Y,Y,Y,Y
-zk,1.0,'Zk' (Standard scalar cryptography extension),Y,Y,Y,Y,Y,Y,Y
-zkn,1.0,'Zkn' (NIST Algorithm Suite),Y,Y,Y,Y,Y,Y,Y
-zknd,1.0,'Zknd' (NIST Suite: AES Decryption),Y,Y,Y,Y,Y,Y,Y
-zkne,1.0,'Zkne' (NIST Suite: AES Encryption),Y,Y,Y,Y,Y,Y,Y
-zknh,1.0,'Zknh' (NIST Suite: Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y
-zkr,1.0,'Zkr' (Entropy Source Extension),Y,Y,Y,Y,Y,Y,Y
-zks,1.0,'Zks' (ShangMi Algorithm Suite),Y,Y,Y,Y,Y,Y,Y
-zksed,1.0,'Zksed' (ShangMi Suite: SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y
-zksh,1.0,'Zksh' (ShangMi Suite: SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y
-zkt,1.0,'Zkt' (Data Independent Execution Latency),Y,Y,Y,Y,Y,Y,Y
-zmmul,1.0,'Zmmul' (Integer Multiplication),Y,Y,Y,Y,Y,Y,Y
-ztso,0.1,'Ztso' (Memory Model - Total Store Order),Y,Y,N,N,N,N,N
-ztso,1.0,'Ztso' (Memory Model - Total Store Order),N,N,Y,N,N,N,Y
-zvbb,1.0,'Zvbb' (Vector basic bit-manipulation instructions),Y,Y,Y,Y,Y,Y,Y
-zvbc,1.0,'Zvbc' (Vector Carryless Multiplication),Y,Y,Y,Y,Y,Y,Y
-zvbc32e,0.7,'Zvbc32e' (Vector Carryless Multiplication with 32-bits elements),N,N,Y,N,N,N,N
-zve32d,1.0,,N,N,N,Y,Y,Y,N
-zve32f,1.0,'Zve32f' (Vector Extensions for Embedded Processors with maximal 32 EEW and F extension),Y,Y,Y,Y,Y,Y,Y
-zve32x,1.0,'Zve32x' (Vector Extensions for Embedded Processors with maximal 32 EEW),Y,Y,Y,Y,Y,Y,Y
-zve64d,1.0,"'Zve64d' (Vector Extensions for Embedded Processors with maximal 64 EEW, F and D extension)",Y,Y,Y,Y,Y,Y,Y
-zve64f,1.0,'Zve64f' (Vector Extensions for Embedded Processors with maximal 64 EEW and F extension),Y,Y,Y,Y,Y,Y,Y
-zve64x,1.0,'Zve64x' (Vector Extensions for Embedded Processors with maximal 64 EEW),Y,Y,Y,Y,Y,Y,Y
-zvfbfmin,0.8,,N,N,N,Y,Y,Y,Y
-zvfbfmin,1.0,'Zvbfmin' (Vector BF16 Converts),Y,Y,Y,Y,Y,Y,Y
-zvfbfwma,0.8,,N,N,N,Y,Y,Y,Y
-zvfbfwma,1.0,'Zvfbfwma' (Vector BF16 widening mul-add),Y,Y,Y,Y,Y,Y,Y
-zvfh,0.1,,N,N,N,Y,Y,Y,N
-zvfh,1.0,'Zvfh' (Vector Half-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y
-zvfhmin,1.0,'Zvfhmin' (Vector Half-Precision Floating-Point Minimal),Y,Y,Y,Y,Y,Y,Y
-zvfofp4min,0.1,'Zvfofp4min' (OFP4 conversion extension Zvfofp4min),N,N,Y,N,N,N,Y
-zvfofp8min,0.2,'Zvfofp8min' (OFP8 conversion extension Zvfofp8min),N,N,Y,N,N,N,Y
-zvkb,0.1,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y
-zvkb,1.0,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y
-zvkg,0.1,'Zvkg' (Vector GCM instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y
-zvkg,1.0,'Zvkg' (Vector GCM instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y
-zvkgs,0.7,'Zvkgs' (Vector-Scalar GCM instructions for Cryptography),N,N,Y,N,N,N,N
-zvkn,1.0,"'Zvkn' (shorthand for 'Zvkned', 'Zvknhb', 'Zvkb', and 'Zvkt')",Y,Y,Y,Y,Y,Y,Y
-zvknc,1.0,'Zvknc' (shorthand for 'Zvknc' and 'Zvbc'),Y,Y,Y,Y,Y,Y,Y
-zvkned,1.0,'Zvkned' (Vector AES Encryption & Decryption (Single Round)),Y,Y,Y,Y,Y,Y,Y
-zvknf,0.1,,N,N,N,Y,Y,Y,Y
-zvkng,1.0,'zvkng' (shorthand for 'Zvkn' and 'Zvkg'),Y,Y,Y,Y,Y,Y,Y
-zvknha,0.1,'Zvknha' (Vector SHA-2 (SHA-256 only)),Y,Y,Y,Y,Y,Y,Y
-zvknha,1.0,'Zvknha' (Vector SHA-2 (SHA-256 only)),Y,Y,Y,Y,Y,Y,Y
-zvknhb,0.1,'Zvknhb' (Vector SHA-2 (SHA-256 and SHA-512)),Y,Y,Y,Y,Y,Y,Y
-zvknhb,1.0,'Zvknhb' (Vector SHA-2 (SHA-256 and SHA-512)),Y,Y,Y,Y,Y,Y,Y
-zvkns,0.1,'Zvkns' (Vector AES Encryption & Decryption (Single Round)),Y,Y,Y,Y,Y,Y,Y
-zvks,1.0,"'Zvks' (shorthand for 'Zvksed', 'Zvksh', 'Zvkb', and 'Zvkt')",Y,Y,Y,Y,Y,Y,Y
-zvksc,1.0,'Zvksc' (shorthand for 'Zvks' and 'Zvbc'),Y,Y,Y,Y,Y,Y,Y
-zvksed,0.1,'Zvksed' (SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y
-zvksed,1.0,'Zvksed' (SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y
-zvksg,1.0,'Zvksg' (shorthand for 'Zvks' and 'Zvkg'),Y,Y,Y,Y,Y,Y,Y
-zvksh,0.1,'Zvksh' (SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y
-zvksh,1.0,'Zvksh' (SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y
-zvkt,1.0,'Zvkt' (Vector Data-Independent Execution Latency),Y,Y,Y,Y,Y,Y,Y
-zvl1024b,1.0,'Zvl' (Minimum Vector Length) 1024,Y,Y,Y,Y,Y,Y,Y
-zvl128b,1.0,'Zvl' (Minimum Vector Length) 128,Y,Y,Y,Y,Y,Y,Y
-zvl16384b,1.0,'Zvl' (Minimum Vector Length) 16384,Y,Y,Y,Y,Y,Y,Y
-zvl2048b,1.0,'Zvl' (Minimum Vector Length) 2048,Y,Y,Y,Y,Y,Y,Y
-zvl256b,1.0,'Zvl' (Minimum Vector Length) 256,Y,Y,Y,Y,Y,Y,Y
-zvl32768b,1.0,'Zvl' (Minimum Vector Length) 32768,Y,Y,Y,Y,Y,Y,Y
-zvl32b,1.0,'Zvl' (Minimum Vector Length) 32,Y,Y,Y,Y,Y,Y,Y
-zvl4096b,1.0,'Zvl' (Minimum Vector Length) 4096,Y,Y,Y,Y,Y,Y,Y
-zvl512b,1.0,'Zvl' (Minimum Vector Length) 512,Y,Y,Y,Y,Y,Y,Y
-zvl64b,1.0,'Zvl' (Minimum Vector Length) 64,Y,Y,Y,Y,Y,Y,Y
-zvl65536b,1.0,'Zvl' (Minimum Vector Length) 65536,Y,Y,Y,Y,Y,Y,Y
-zvl8192b,1.0,'Zvl' (Minimum Vector Length) 8192,Y,Y,Y,Y,Y,Y,Y
-zvlsseg,0.10,,N,N,N,Y,Y,Y,Y
-zvlsseg,1.0,,N,N,N,Y,Y,Y,Y
-zvqdotq,0.0,'Zvqdotq' (Vector quad widening 4D Dot Product),N,N,Y,N,N,N,N
+Name,Version,Description,clang-2.0.3,clang-3.1.5,clang-4.0.0,clang-4.0.1,clang-4.0.2,clang-4.0.3,gcc-1.0.7,gcc-2.0.3,gcc-3.1.5,gcc-4.0.0,gcc-4.0.1,gcc-4.0.2,gcc-4.0.3
+a,2.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+a,2.1,'A' (Atomic Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+b,1.0,"'B' (the collection of the Zba, Zbb, Zbs extensions)",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+c,2.0,'C' (Compressed Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+d,2.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+d,2.2,'D' (Double-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+e,1.9,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+e,2.0,"Implements RV{32,64}E (provides 16 rather than 32 GPRs)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+f,2.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+f,2.2,'F' (Single-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+h,1.0,'H' (Hypervisor),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+i,2.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+i,2.1,'I' (Base Integer Instruction Set),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+m,2.0,'M' (Integer Multiplication and Division),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sdext,1.0,'Sdext' (External Debugging Extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sdtrig,1.0,'Sdtrig' (Debugging Triggers),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sha,1.0,'Sha' (Augmented Hypervisor),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+shcounterenw,1.0,'Shcounterenw' (Support writeable hcounteren enable bit for any hpmcounter that is not read-only zero),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+shgatpa,1.0,"'Sgatpa' (SvNNx4 mode supported for all modes supported by satp, as well as Bare)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+shtvala,1.0,'Shtvala' (htval provides all needed values),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+shvsatpa,1.0,'Svsatpa' (vsatp supports all modes supported by satp),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+shvstvala,1.0,'Shvstvala' (vstval provides all needed values),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+shvstvecd,1.0,'Shvstvecd' (vstvec supports Direct mode),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+smaia,1.0,'Smaia' (Advanced Interrupt Architecture Machine Level),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+smcdeleg,1.0,'Smcdeleg' (Counter Delegation Machine Level),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+smcsrind,1.0,'Smcsrind' (Indirect CSR Access Machine Level),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+smctr,1.0,'Smctr' (Control Transfer Records Machine Level),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+smdbltrp,1.0,'Smdbltrp' (Double Trap Machine Level),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+smepmp,1.0,'Smepmp' (Enhanced Physical Memory Protection),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+smmpm,0.8,'Smmpm' (Machine-level Pointer Masking for M-mode),Y,N,N,N,N,N,Y,Y,N,N,N,N,N
+smmpm,1.0,'Smmpm' (Machine-level Pointer Masking for M-mode),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+smnpm,0.8,'Smnpm' (Machine-level Pointer Masking for next lower privilege mode),Y,N,N,N,N,N,Y,Y,N,N,N,N,N
+smnpm,1.0,'Smnpm' (Machine-level Pointer Masking for next lower privilege mode),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+smrnmi,0.5,'Smrnmi' (Resumable Non-Maskable Interrupts),Y,N,N,N,N,N,N,Y,N,N,N,N,N
+smrnmi,1.0,'Smrnmi' (Resumable Non-Maskable Interrupts),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+smstateen,1.0,'Smstateen' (Machine-mode view of the state-enable extension.),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+smwg,0.3,"'Smwg' (The Smwg extension adds the mlwid CSR, which is an M-mode read-write CSR, whose least-significant bits set the WID to be used by lower-privilege modes.)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+smwgd,0.3,'Smwgd' (The Smwgd extension adds the mwiddeleg M-mode read-write CSR. The mwiddeleg register represents a set of WIDs as a bit vector with WID i represented by bit i of the register.),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ss,1.12,'Ss' (Supervisor Architecture),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ss,1.13,'Ss' (Supervisor Architecture),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ssaia,1.0,'Ssaia' (Advanced Interrupt Architecture Supervisor Level),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ssccfg,1.0,'Ssccfg' (Counter Configuration Supervisor Level),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+ssccptr,1.0,'Ssccptr' (Main memory supports page table reads),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sscofpmf,1.0,'Sscofpmf' (Count Overflow and Mode-Based Filtering Architecture extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sscounterenw,1.0,'Sscounterenw' (Support writeable scounteren enable bit for any hpmcounter that is not read-only zero),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sscsrind,1.0,'Sscsrind' (Indirect CSR Access Supervisor Level),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+ssctr,1.0,'Ssctr' (Control Transfer Records Supervisor Level),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+ssdbltrp,1.0,'Ssdbltrp' (Double Trap Supervisor Level),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+ssnpm,0.8,'Ssnpm' (Supervisor-level Pointer Masking for next lower privilege mode),Y,N,N,N,N,N,Y,Y,N,N,N,N,N
+ssnpm,1.0,'Ssnpm' (Supervisor-level Pointer Masking for next lower privilege mode),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+sspm,0.8,'Sspm' (Indicates Supervisor-mode Pointer Masking),Y,N,N,N,N,N,Y,Y,N,N,N,N,N
+sspm,1.0,'Sspm' (Indicates Supervisor-mode Pointer Masking),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+ssqosid,1.0,'Ssqosid' (Quality-of-Service (QoS) Identifiers),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ssstateen,1.0,'Ssstateen' (Supervisor-mode view of the state-enable extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ssstrict,1.0,'Ssstrict' (No non-conforming extensions are present),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sstc,1.0,'Sstc' (Supervisor-mode timer interrupts),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sstvala,1.0,'Sstvala' (stval provides all needed values),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sstvecd,1.0,'Sstvecd' (stvec supports Direct mode),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ssu64xl,1.0,'Ssu64xl' (UXLEN=64 supported),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+sswg,0.3,"'Sswg' (The Sswg extension adds the [H]S-mode read-write slwid CSR, which sets the WID used for modes lower than [H]S-mode.)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+supm,0.8,'Supm' (Indicates User-mode Pointer Masking),Y,N,N,N,N,N,Y,Y,N,N,N,N,N
+supm,1.0,'Supm' (Indicates User-mode Pointer Masking),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+sv39,1.12,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+sv48,1.12,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+sv57,1.12,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+svade,1.0,'Svade' (Raise exceptions on improper A/D bits),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svadu,1.0,'Svadu' (Hardware A/D updates),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svbare,1.0,'Svbare' $(satp mode Bare supported),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svinval,1.0,'Svinval' (Fine-Grained Address-Translation Cache Invalidation),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svnapot,1.0,'Svnapot' (NAPOT Translation Contiguity),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svpbmt,1.0,'Svpbmt' (Page-Based Memory Types),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svptead,1.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+svukte,0.4,'Svukte' (Address-Independent Latency of User-Mode Faults to Supervisor Addresses),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+svvptc,1.0,'Svvptc' (Obviating Memory-Management Instructions after Marking PTEs Valid),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+v,0.10,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+v,1.0,'V' (Vector Extension for Application Processors),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xcvalu,1.0,'XCValu' (CORE-V ALU Operations),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xcvbi,1.0,'XCVbi' (CORE-V Immediate Branching),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xcvbitmanip,1.0,'XCVbitmanip' (CORE-V Bit Manipulation),Y,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+xcvelw,1.0,'XCVelw' (CORE-V Event Load Word),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xcvmac,1.0,'XCVmac' (CORE-V Multiply-Accumulate),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xcvmem,1.0,'XCVmem' (CORE-V Post-incrementing Load & Store),Y,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+xcvsimd,1.0,'XCVsimd' (CORE-V SIMD ALU),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xqcia,0.2,'Xqcia' (Qualcomm uC Arithmetic Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqciac,0.2,'Xqciac' (Qualcomm uC Load-Store Address Calculation Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcicli,0.2,'Xqcicli' (Qualcomm uC Conditional Load Immediate Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcicm,0.2,'Xqcicm' (Qualcomm uC Conditional Move Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcics,0.2,'Xqcics' (Qualcomm uC Conditional Select Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcicsr,0.2,'Xqcicsr' (Qualcomm uC CSR Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqciint,0.2,'Xqciint' (Qualcomm uC Interrupts Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcilo,0.2,'Xqcilo' (Qualcomm uC Large Offset Load Store Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcilsm,0.2,'Xqcilsm' (Qualcomm uC Load Store Multiple Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xqcisls,0.2,'Xqcisls' (Qualcomm uC Scaled Load Store Extension),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+xsfcease,0.1,'XSfcease' (SiFive sf.cease Instruction),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfcease,1.0,'XSfcease' (SiFive sf.cease Instruction),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm128t,0.6,'XSfmm128t' TE=128 configuration,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm16t,0.6,'XSfmm16t' TE=16 configuration,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32a,0.6,"'XSfmm32a' (TEW=32-bit accumulation) operands - int: 8b; float: fp16, bf16, fp32",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32a16f,0.6,"'XSfmm32a16f' (TEW=32-bit accumulation) operands - float: 16b, widen=2 (IEEE, BF)",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32a32f,0.6,'XSfmm32a32f' (TEW=32-bit accumulation) operands - float: 32b,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32a4i,0.6,'XSfmm32a4i' (TEW=32-bit accumulation) operands - int: 4b (packed),N,Y,Y,N,N,N,N,N,Y,Y,Y,Y,Y
+xsfmm32a8f,0.6,'XSfmm32a8f' (TEW=32-bit accumulation) operands - float: fp8,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32a8i,0.6,'XSfmm32a8i' (TEW=32-bit accumulation) operands - int: 8b,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm32ea,0.6,"'XSfmm32ea' (TEW=32-bit accumulation) instructions: sf.vset*, sf.vtmv*, sf.mm.f.f (SEW=32), sf.vtzero",N,Y,N,N,N,N,N,N,Y,N,N,N,N
+xsfmm32t,0.6,'XSfmm32t' TE=32 configuration,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm64a64f,0.6,'XSfmm64a64f' (TEW=64-bit accumulation) operands - float: fp64,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmm64t,0.6,'XSfmm64t' TE=64 configuration,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfmmbase,0.6,'XSfmmbase' All non arithmetic instructions for all TEWs and sf.vtzero,N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfpgflushdlone,0.1,'XSfpgflushdlone' (Cache Flush/Power Down Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfpmpmt,0.1,'Xsfpmpmt' (SiFive PMP-based Memory Types Extension),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfsci,1.0,'XSfsci' (SiFive Custom Scalar Coprocessor Interface Instructions),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvcp,0.1,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+xsfvcp,1.0,'XSfvcp' (SiFive Custom Vector Coprocessor Interface Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvfbfa,0.1,'XSfvfbfa' (SiFive custom additional BF16 vector compute support),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfbfexp16e,0.1,"'Xsfvfbfexp16e' (SiFive Vector Floating-Point Exponential Function Instruction, BFloat16)",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfexp16e,0.1,"'Xsfvfexp16e' (SiFive Vector Floating-Point Exponential Function Instruction, Half Precision)",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfexp32e,0.1,"'Xsfvfexp32e' (SiFive Vector Floating-Point Exponential Function Instruction, Single Precision)",N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfexpa,0.2,'Xsfvfexpa' (SiFive Vector Floating-Point Exponential Approximation Instruction),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfexpa64e,0.2,'Xsfvfexpa64e' (SiFive Vector Floating-Point Exponential Approximation Instruction with Double-Precision),N,Y,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+xsfvfhbfmin,0.1,'Xsfvfhbfmin' (SiFive custom minimal BF16 vector support),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvfnrclipxfqf,0.1,'XSfvfnrclipxfqf' (SiFive FP32-to-int8 Ranged Clip Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvfnrclipxfqf,1.0,'XSfvfnrclipxfqf' (SiFive FP32-to-int8 Ranged Clip Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvfwmaccqqq,0.1,'XSfvfwmaccqqq' (SiFive Matrix Multiply Accumulate Instruction and 4-by-4)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvfwmaccqqq,1.0,'XSfvfwmaccqqq' (SiFive Matrix Multiply Accumulate Instruction and 4-by-4)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvqdotq,0.1,'Xsfvqdotq' (SiFive Vector Quad-Widening 4D Dot Product Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvqmaccdod,0.1,'XSfvqmaccdod' (SiFive Int8 Matrix Multiplication Instructions (2-by-8 and 8-by-2)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvqmaccdod,1.0,'XSfvqmaccdod' (SiFive Int8 Matrix Multiplication Instructions (2-by-8 and 8-by-2)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvqmaccqoq,0.1,'XSfvqmaccqoq' (SiFive Int8 Matrix Multiplication Instructions (4-by-8 and 8-by-4)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsfvqmaccqoq,1.0,'XSfvqmaccqoq' (SiFive Int8 Matrix Multiplication Instructions (4-by-8 and 8-by-4)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsifivecdiscarddlone,0.1,'XSiFivecdiscarddlone' (SiFive sf.cdiscard.d.l1 Instruction),N,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xsifivecdiscarddlone,1.0,'XSiFivecdiscarddlone' (SiFive sf.cdiscard.d.l1 Instruction),N,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+xsifivecdiscarddlone0.1,'XSiFivecdiscarddlone',(Cache Flush/Power Down Instructions),Y,N,N,N,N,N,N,N,N,N,N,N,N
+xsifivecflushdlone,0.1,'XSiFivecflushdlone' (Cache Flush/Power Down Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xsifivecflushdlone,1.0,'XSiFivecflushdlone' (SiFive sf.cflush.d.l1 Instruction),N,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+xtheadba,1.0,'xtheadba' (T-Head address calculation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadbb,1.0,'xtheadbb' (T-Head basic bit-manipulation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadbs,1.0,'xtheadbs' (T-Head single-bit instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadcmo,1.0,'xtheadcmo' (T-Head cache management instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadcondmov,1.0,'xtheadcondmov' (T-Head conditional move instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadfmemidx,1.0,'xtheadfmemidx' (T-Head FP Indexed Memory Operations),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadfmv,1.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+xtheadint,1.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+xtheadmac,1.0,'xtheadmac' (T-Head Multiply-Accumulate Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadmemidx,1.0,'xtheadmemidx' (T-Head Indexed Memory Operations),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadmempair,1.0,'xtheadmempair' (T-Head two-GPR Memory Operations),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadsync,1.0,'xtheadsync' (T-Head multicore synchronization instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+xtheadvdot,1.0,'xtheadvdot' (T-Head Vector Extensions for Dot),Y,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+xtheadvector,1.0,,N,N,N,N,N,N,N,N,N,Y,Y,Y,Y
+xventanacondops,1.0,'XVentanaCondOps' (Ventana Conditional Ops),Y,Y,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+xwchc,2.2,'Xwchc' (WCH/QingKe additional compressed opcodes),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+za128rs,1.0,'Za128rs' (Reservation Set Size of at Most 128 Bytes),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+za64rs,1.0,'Za64rs' (Reservation Set Size of at Most 64 Bytes),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zaamo,0.2,'Zaamo' (Atomic Memory Operations),Y,Y,N,N,N,N,N,N,N,N,N,N,N
+zaamo,1.0,'Zaamo' (Atomic Memory Operations),N,N,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+zabha,1.0,'Zabha' (Byte and Halfword Atomic Memory Operations),Y,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+zacas,1.0,'Zacas' (Atomic Compare-And-Swap Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zalasr,0.1,'Zalasr' (Load-Acquire and Store-Release Instructions),Y,Y,Y,Y,Y,Y,N,N,N,N,N,N,N
+zalasr,1.0,,N,N,N,N,N,N,N,N,N,Y,Y,Y,Y
+zalrsc,0.2,'Zalrsc' (Load-Reserved/Store-Conditional),Y,Y,N,N,N,N,N,N,N,N,N,N,N
+zalrsc,1.0,'Zalrsc' (Load-Reserved/Store-Conditional),N,N,Y,Y,Y,Y,N,N,Y,Y,Y,Y,Y
+zama16b,1.0,"'Zama16b' (Atomic 16-byte misaligned loads, stores and AMOs)",Y,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zawrs,1.0,'Zawrs' (Wait on Reservation Set),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zba,0.93,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zba,1.0,'Zba' (Address Generation Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbb,0.93,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zbb,1.0,'Zbb' (Basic Bit-Manipulation),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbc,1.0,'Zbc' (Carry-Less Multiplication),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbkb,1.0,'Zbkb' (Bitmanip instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbkc,1.0,'Zbkc' (Carry-less multiply instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbkx,1.0,'Zbkx' (Crossbar permutation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zbs,1.0,'Zbs' (Single-Bit Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zca,1.0,"'Zca' (part of the C extension, excluding compressed floating point loads/stores)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zcb,1.0,'Zcb' (Compressed basic bit manipulation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zcd,1.0,'Zcd' (Compressed Double-Precision Floating-Point Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zce,1.0,'Zce' (Compressed extensions for microcontrollers),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zcf,1.0,'Zcf' (Compressed Single-Precision Floating-Point Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zclsd,1.0,,N,N,N,N,N,N,N,N,N,N,Y,Y,Y
+zcmop,1.0,'Zcmop' (Compressed May-Be-Operations),Y,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zcmp,1.0,'Zcmp' (sequenced instuctions for code-size reduction),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zcmt,1.0,'Zcmt' (table jump instuctions for code-size reduction),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zdinx,1.0,'Zdinx' (Double in Integer),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zfa,0.1,,N,N,N,N,N,N,Y,N,N,N,N,N,N
+zfa,0.2,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zfa,1.0,'Zfa' (Additional Floating-Point),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zfbfmin,0.8,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zfbfmin,1.0,'Zfbfmin' (Scalar BF16 Converts),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zfh,1.0,'Zfh' (Half-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zfhmin,1.0,'Zfhmin' (Half-Precision Floating-Point Minimal),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zfinx,1.0,'Zfinx' (Float in Integer),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zhinx,1.0,'Zhinx' (Half Float in Integer),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zhinxmin,1.0,'Zhinxmin' (Half Float in Integer Minimal),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zibi,0.1,'Zibi' (Branch with Immediate),N,N,N,N,Y,Y,N,N,N,N,N,N,N
+zic64b,1.0,'Zic64b' (Cache Block Size Is 64 Bytes),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicbom,1.0,'Zicbom' (Cache-Block Management Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicbop,1.0,'Zicbop' (Cache-Block Prefetch Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicboz,1.0,'Zicboz' (Cache-Block Zero Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ziccamoa,1.0,'Ziccamoa' (Main Memory Supports All Atomics in A),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ziccif,1.0,'Ziccif' (Main Memory Supports Instruction Fetch with Atomicity Requirement),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicclsm,1.0,'Zicclsm' (Main Memory Supports Misaligned Loads/Stores),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ziccrse,1.0,'Ziccrse' (Main Memory Supports Forward Progress on LR/SC Sequences),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicfilp,0.2,,N,N,N,N,N,N,Y,N,N,N,N,N,N
+zicfilp,0.4,'Zicfilp' (Landing pad),Y,N,N,N,N,N,N,N,N,N,N,N,N
+zicfilp,1.0,'Zicfilp' (Landing pad),N,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zicfiss,0.2,,N,N,N,N,N,N,Y,N,N,N,N,N,N
+zicfiss,0.4,'Zicfiss' (Shadow stack),Y,N,N,N,N,N,N,N,N,N,N,N,N
+zicfiss,1.0,'Zicfiss' (Shadow stack),N,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zicntr,1.0,,N,N,N,N,N,N,Y,Y,Y,N,N,N,N
+zicntr,2.0,'Zicntr' (Base Counters and Timers),Y,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zicond,1.0,'Zicond' (Integer Conditional Operations),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zicsr,2.0,'zicsr' (CSRs),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zifencei,2.0,'Zifencei' (fence.i),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zihintntl,1.0,'Zihintntl' (Non-Temporal Locality Hints),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zihintpause,1.0,,N,N,N,N,N,N,Y,Y,Y,N,N,N,N
+zihintpause,2.0,'Zihintpause' (Pause Hint),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zihpm,1.0,,N,N,N,N,N,N,Y,Y,Y,N,N,N,N
+zihpm,2.0,'Zihpm' (Hardware Performance Counters),Y,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zilsd,1.0,,N,N,N,N,N,N,N,N,N,N,Y,Y,Y
+zimop,1.0,'Zimop' (May-Be-Operations),Y,Y,Y,Y,Y,Y,N,Y,Y,Y,Y,Y,Y
+zjid,0.0,'Zjid' (Instruction/Data Cache Synchronization),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zk,1.0,'Zk' (Standard scalar cryptography extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zkn,1.0,'Zkn' (NIST Algorithm Suite),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zknd,1.0,'Zknd' (NIST Suite: AES Decryption),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zkne,1.0,'Zkne' (NIST Suite: AES Encryption),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zknh,1.0,'Zknh' (NIST Suite: Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zkr,1.0,'Zkr' (Entropy Source Extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zks,1.0,'Zks' (ShangMi Algorithm Suite),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zksed,1.0,'Zksed' (ShangMi Suite: SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zksh,1.0,'Zksh' (ShangMi Suite: SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zkt,1.0,'Zkt' (Data Independent Execution Latency),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zmmul,1.0,'Zmmul' (Integer Multiplication),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+ztso,0.1,'Ztso' (Memory Model - Total Store Order),Y,Y,N,N,N,N,N,N,N,N,N,N,N
+ztso,1.0,'Ztso' (Memory Model - Total Store Order),N,N,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+zvbb,1.0,'Zvbb' (Vector basic bit-manipulation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvbc,1.0,'Zvbc' (Vector Carryless Multiplication),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvbc32e,0.7,'Zvbc32e' (Vector Carryless Multiplication with 32-bits elements),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+zve32d,1.0,,N,N,N,N,N,N,Y,Y,Y,N,N,N,N
+zve32f,1.0,'Zve32f' (Vector Extensions for Embedded Processors with maximal 32 EEW and F extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zve32x,1.0,'Zve32x' (Vector Extensions for Embedded Processors with maximal 32 EEW),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zve64d,1.0,"'Zve64d' (Vector Extensions for Embedded Processors with maximal 64 EEW, F and D extension)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zve64f,1.0,'Zve64f' (Vector Extensions for Embedded Processors with maximal 64 EEW and F extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zve64x,1.0,'Zve64x' (Vector Extensions for Embedded Processors with maximal 64 EEW),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvfbfmin,0.8,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zvfbfmin,1.0,'Zvbfmin' (Vector BF16 Converts),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvfbfwma,0.8,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zvfbfwma,1.0,'Zvfbfwma' (Vector BF16 widening mul-add),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvfh,0.1,,N,N,N,N,N,N,Y,Y,Y,N,N,N,N
+zvfh,1.0,'Zvfh' (Vector Half-Precision Floating-Point),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvfhmin,1.0,'Zvfhmin' (Vector Half-Precision Floating-Point Minimal),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvfofp4min,0.1,'Zvfofp4min' (OFP4 conversion extension Zvfofp4min),N,N,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+zvfofp8min,0.2,'Zvfofp8min' (OFP8 conversion extension Zvfofp8min),N,N,Y,Y,Y,Y,N,N,N,Y,Y,Y,Y
+zvkb,0.1,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkb,1.0,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkg,0.1,'Zvkg' (Vector GCM instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkg,1.0,'Zvkg' (Vector GCM instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkgs,0.7,'Zvkgs' (Vector-Scalar GCM instructions for Cryptography),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N
+zvkn,1.0,"'Zvkn' (shorthand for 'Zvkned', 'Zvknhb', 'Zvkb', and 'Zvkt')",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknc,1.0,'Zvknc' (shorthand for 'Zvknc' and 'Zvbc'),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkned,1.0,'Zvkned' (Vector AES Encryption & Decryption (Single Round)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknf,0.1,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zvkng,1.0,'zvkng' (shorthand for 'Zvkn' and 'Zvkg'),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknha,0.1,'Zvknha' (Vector SHA-2 (SHA-256 only)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknha,1.0,'Zvknha' (Vector SHA-2 (SHA-256 only)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknhb,0.1,'Zvknhb' (Vector SHA-2 (SHA-256 and SHA-512)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvknhb,1.0,'Zvknhb' (Vector SHA-2 (SHA-256 and SHA-512)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkns,0.1,'Zvkns' (Vector AES Encryption & Decryption (Single Round)),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvks,1.0,"'Zvks' (shorthand for 'Zvksed', 'Zvksh', 'Zvkb', and 'Zvkt')",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksc,1.0,'Zvksc' (shorthand for 'Zvks' and 'Zvbc'),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksed,0.1,'Zvksed' (SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksed,1.0,'Zvksed' (SM4 Block Cipher Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksg,1.0,'Zvksg' (shorthand for 'Zvks' and 'Zvkg'),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksh,0.1,'Zvksh' (SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvksh,1.0,'Zvksh' (SM3 Hash Function Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvkt,1.0,'Zvkt' (Vector Data-Independent Execution Latency),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl1024b,1.0,'Zvl' (Minimum Vector Length) 1024,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl128b,1.0,'Zvl' (Minimum Vector Length) 128,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl16384b,1.0,'Zvl' (Minimum Vector Length) 16384,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl2048b,1.0,'Zvl' (Minimum Vector Length) 2048,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl256b,1.0,'Zvl' (Minimum Vector Length) 256,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl32768b,1.0,'Zvl' (Minimum Vector Length) 32768,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl32b,1.0,'Zvl' (Minimum Vector Length) 32,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl4096b,1.0,'Zvl' (Minimum Vector Length) 4096,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl512b,1.0,'Zvl' (Minimum Vector Length) 512,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl64b,1.0,'Zvl' (Minimum Vector Length) 64,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl65536b,1.0,'Zvl' (Minimum Vector Length) 65536,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvl8192b,1.0,'Zvl' (Minimum Vector Length) 8192,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zvlsseg,0.10,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zvlsseg,1.0,,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y,Y
+zvqdotq,0.0,'Zvqdotq' (Vector quad widening 4D Dot Product),N,N,Y,Y,Y,Y,N,N,N,N,N,N,N

@@ -8,8 +8,10 @@ All available -march extensions for RISC-V:
 	d                   	2.0, 2.2
 	c                   	2.0
 	b                   	1.0
+	p                   	0.15
 	v                   	0.10, 1.0
 	h                   	1.0
+	zibi                	0.1
 	zic64b              	1.0
 	zicbom              	1.0
 	zicbop              	1.0
@@ -27,6 +29,7 @@ All available -march extensions for RISC-V:
 	zihintntl           	1.0
 	zihintpause         	2.0
 	zihpm               	2.0
+	zilsd               	1.0
 	zimop               	1.0
 	zmmul               	1.0
 	za128rs             	1.0
@@ -48,6 +51,7 @@ All available -march extensions for RISC-V:
 	zcd                 	1.0
 	zce                 	1.0
 	zcf                 	1.0
+	zclsd               	1.0
 	zcmop               	1.0
 	zcmp                	1.0
 	zcmt                	1.0
@@ -125,6 +129,7 @@ All available -march extensions for RISC-V:
 	smaia               	1.0
 	smcsrind            	1.0
 	smctr               	1.0
+	smdbltrp            	1.0
 	smepmp              	1.0
 	smmpm               	1.0
 	smnpm               	1.0
@@ -139,8 +144,10 @@ All available -march extensions for RISC-V:
 	sscounterenw        	1.0
 	sscsrind            	1.0
 	ssctr               	1.0
+	ssdbltrp            	1.0
 	ssnpm               	1.0
 	sspm                	1.0
+	sspmp               	0.9
 	ssqosid             	1.0
 	ssstateen           	1.0
 	ssstrict            	1.0
@@ -161,6 +168,7 @@ All available -march extensions for RISC-V:
 	svpbmt              	1.0
 	svptead             	1.0
 	svukte              	0.4
+	svvptc              	1.0
 	xcvalu              	1.0
 	xcvbi               	1.0
 	xcvelw              	1.0
@@ -172,7 +180,6 @@ All available -march extensions for RISC-V:
 	xsfmm32a            	0.6
 	xsfmm32a16f         	0.6
 	xsfmm32a32f         	0.6
-	xsfmm32a4i          	0.6
 	xsfmm32a8f          	0.6
 	xsfmm32a8i          	0.6
 	xsfmm32t            	0.6

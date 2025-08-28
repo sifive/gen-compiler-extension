@@ -35,6 +35,7 @@ gcc_triple_name="$DEFAULT_GCC_TRIPLE"
 clang_triple_name="$DEFAULT_CLANG_TRIPLE"
 specific_version=""
 no_description=""
+force_full=0
 
 # Copy toolchain versions from config
 versions=("${TOOLCHAIN_VERSIONS[@]}")
@@ -104,15 +105,54 @@ if [ -n "$specific_version" ]; then
   versions=("$specific_version")
 fi
 
-# If output folder doesn't exist or force mode is enabled, run full processing
-if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
-  echo "🛠  Running full processing..."
-
-  # Create (or recreate) the output folder
-  rm -rf "$output_folder"
-  mkdir -p "$output_folder"
-
+# Function to check if all CSV files exist for all versions
+check_all_csv_files_exist() {
+  local missing_files=0
+  
   for version in "${versions[@]}"; do
+    local gcc_file="$output_folder/gcc-$version.csv"
+    local clang_file="$output_folder/clang-$version.csv"
+    
+    if [ ! -f "$gcc_file" ]; then
+      echo "Missing: $gcc_file"
+      missing_files=1
+    fi
+    
+    if [ ! -f "$clang_file" ]; then
+      echo "Missing: $clang_file"
+      missing_files=1
+    fi
+  done
+  
+  return $missing_files
+}
+
+# Check if all CSV files exist or force mode is enabled
+if ! check_all_csv_files_exist || [ $force_full -eq 1 ]; then
+  if [ $force_full -eq 1 ]; then
+    echo "🛠  Force mode enabled. Running full processing..."
+    # Create (or recreate) the output folder
+    rm -rf "$output_folder"
+    mkdir -p "$output_folder"
+    process_versions=("${versions[@]}")
+  else
+    echo "🛠  Missing CSV files detected. Processing missing versions only..."
+    # Create output folder if it doesn't exist
+    mkdir -p "$output_folder"
+    
+    # Only process versions with missing CSV files
+    process_versions=()
+    for version in "${versions[@]}"; do
+      gcc_file="$output_folder/gcc-$version.csv"
+      clang_file="$output_folder/clang-$version.csv"
+      
+      if [ ! -f "$gcc_file" ] || [ ! -f "$clang_file" ]; then
+        process_versions+=("$version")
+      fi
+    done
+  fi
+
+  for version in "${process_versions[@]}"; do
     echo "=== Processing version $version ==="
 
     module unload "$BASE_MODULE"
@@ -152,7 +192,7 @@ if [ ! -d "$output_folder" ] || [ $force_full -eq 1 ]; then
     fi
   done
 else
-  echo "📁 Output folder exists. Skipping processing and running merge only."
+  echo "📁 All CSV files exist for all toolchain versions. Skipping processing and running merge only."
   echo "    Use --force to regenerate all files."
 fi
 
@@ -161,5 +201,4 @@ echo "📦 Merging CSV files into $output_merged"
 python3 merge_riscv_extensions.py -i "$output_folder"/clang*.csv "$output_folder"/gcc*.csv -o "$output_merged" $no_description
 python3 gen_csv2xlsx.py -f -s -o compiler-ext.xlsx compiler-ext.csv
 echo "✅ Done."
-
 

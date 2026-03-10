@@ -198,7 +198,29 @@ fi
 
 # Always run merge step
 echo "📦 Merging CSV files into $output_merged"
-python3 merge_riscv_extensions.py -i "$output_folder"/clang*.csv "$output_folder"/gcc*.csv -o "$output_merged" $no_description
-python3 gen_csv2xlsx.py -f -s -o compiler-ext.xlsx compiler-ext.csv
+
+# Build list of CSV files for specified versions only
+csv_files=()
+for version in "${versions[@]}"; do
+  gcc_file="$output_folder/gcc-$version.csv"
+  clang_file="$output_folder/clang-$version.csv"
+
+  if [ -f "$gcc_file" ]; then
+    csv_files+=("$gcc_file")
+  fi
+
+  if [ -f "$clang_file" ]; then
+    csv_files+=("$clang_file")
+  fi
+done
+
+# Merge only the CSV files from specified versions
+if [ ${#csv_files[@]} -gt 0 ]; then
+  python3 merge_riscv_extensions.py -i "${csv_files[@]}" -o "$output_merged" $no_description
+  python3 gen_csv2xlsx.py -f -s -o compiler-ext.xlsx compiler-ext.csv
+else
+  echo "[WARNING] No CSV files found for specified versions"
+fi
+
 echo "✅ Done."
 

@@ -1,4 +1,4 @@
-Name,Version,Description,gcc-3.1.5,clang-3.1.5,gcc-4.0.5,clang-4.0.5,gcc-4.0.6,clang-4.0.6,gcc-4.1.0,clang-4.1.0,gcc-4.2.3,clang-4.2.3
+Name,Version,Description,gcc-3.1.5,clang-3.1.5,gcc-4.0.5,clang-4.0.5,gcc-4.0.6,clang-4.0.6,gcc-4.1.0,clang-4.1.0,gcc-4.2.4,clang-4.2.4
 a,2.0,,Y,N,Y,N,Y,N,Y,N,Y,N
 a,2.1,'A' (Atomic Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 b,1.0,"'B' (the collection of the Zba, Zbb, Zbs extensions)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y

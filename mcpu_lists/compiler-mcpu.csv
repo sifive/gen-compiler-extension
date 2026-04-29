@@ -1,4 +1,4 @@
-CPU,3.1.5-GCC,3.1.5-Clang,4.0.5-GCC,4.0.5-Clang,4.0.6-GCC,4.0.6-Clang,4.1.0-GCC,4.1.0-Clang,4.2.3-GCC,4.2.3-Clang
+CPU,3.1.5-GCC,3.1.5-Clang,4.0.5-GCC,4.0.5-Clang,4.0.6-GCC,4.0.6-Clang,4.1.0-GCC,4.1.0-Clang,4.2.4-GCC,4.2.4-Clang
 generic,,X,,X,,X,,X,,X
 generic-rv32,,X,,X,,X,,X,,X
 generic-rv64,,X,,X,,X,,X,,X
@@ -8,10 +8,10 @@ rocket-rv32,,X,,X,,X,,X,,X
 rocket-rv64,,X,,X,,X,,X,,X
 rp2350-hazard3,,,,X,,X,,X,,X
 sifive-6-series,,X,,X,,X,,X,,X
+sifive-7-series,,X,,X,,X,,X,,X
 sifive-7m-series,,X,,X,,X,,X,,X
 sifive-7n-series,,X,,X,,X,,X,,X
 sifive-7o-series,,X,,X,,X,,X,,X
-sifive-7-series,,X,,X,,X,,X,,X
 sifive-8-series,,X,,,,,,,,
 sifive-cheetah,X,X,X,X,X,X,X,X,X,X
 sifive-e20,X,X,X,X,X,X,X,X,X,X

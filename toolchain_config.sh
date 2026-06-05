@@ -13,6 +13,7 @@ TOOLCHAIN_VERSIONS=(
   "4.0.6"
   "4.1.0"
   "4.2.4"
+  "4.2.5"
 )
 
 # Default compiler names

@@ -1,4 +1,4 @@
-CPU,3.1.5-GCC,3.1.5-Clang,4.0.5-GCC,4.0.5-Clang,4.0.6-GCC,4.0.6-Clang,4.1.0-GCC,4.1.0-Clang,4.2.4-GCC,4.2.4-Clang,4.2.5-GCC,4.2.5-Clang,5.0.1-GCC,5.0.1-Clang
+CPU,3.1.5-GCC,3.1.5-Clang,4.0.5-GCC,4.0.5-Clang,4.0.6-GCC,4.0.6-Clang,4.1.0-GCC,4.1.0-Clang,4.2.5-GCC,4.2.5-Clang,4.2.6-GCC,4.2.6-Clang,5.0.2-GCC,5.0.2-Clang
 andes-45-series,,,,,,,,,,,,,,X
 andes-a25,,,,,,,,,,,,,,X
 andes-a45,,,,,,,,,,,,,,X
@@ -47,7 +47,7 @@ sifive-p450,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-p470,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-p500-series,,X,,X,,X,,X,,X,,X,,X
 sifive-p550,X,X,X,X,X,X,X,X,X,X,X,X,X,X
-sifive-p570-gen3,,,,,,,,,,,,,,X
+sifive-p570-gen3,,,,,,,,,,,,,X,X
 sifive-p600-series,,X,,X,,X,,X,,X,,X,,X
 sifive-p650,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-p670,X,X,X,X,X,X,X,X,X,X,X,X,X,X
@@ -72,15 +72,15 @@ sifive-u74r,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-x160,,,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-x180,,,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-x280,X,X,X,X,X,X,X,X,X,X,X,X,X,X
-sifive-x280-gen2-dual-valu,,,,,,,,,,X,,X,,X
-sifive-x280-gen2-full-fp64,,,,,,,,,,X,,X,,X
-sifive-x280-gen2-single-fp64,,,,,,,,,,X,,X,,X
+sifive-x280-gen2-dual-valu,,,,,,,,,,X,,X,X,X
+sifive-x280-gen2-full-fp64,,,,,,,,,,X,,X,X,X
+sifive-x280-gen2-single-fp64,,,,,,,,,,X,,X,X,X
 sifive-x280n,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-x280o,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 sifive-x390,X,X,X,X,X,X,X,X,X,X,X,X,X,X
-sifive-x390-fast-fp64,,X,,X,,X,,X,,X,,X,,X
+sifive-x390-fast-fp64,,X,,X,,X,,X,,X,,X,X,X
 sifive-x390-gen2,,,,,,,,X,X,X,X,X,X,X
-sifive-x390-gen2-full-fp64,,,,,,,,X,,X,,X,,X
+sifive-x390-gen2-full-fp64,,,,,,,,X,,X,,X,X,X
 spacemit-x60,,,,X,,X,,X,,X,,X,,X
 syntacore-scr1-base,,X,,X,,X,,X,,X,,X,,X
 syntacore-scr1-max,,X,,X,,X,,X,,X,,X,,X

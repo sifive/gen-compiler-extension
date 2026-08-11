@@ -1,4 +1,4 @@
-Name,Version,Description,gcc-3.1.5,clang-3.1.5,gcc-4.0.5,clang-4.0.5,gcc-4.0.6,clang-4.0.6,gcc-4.1.0,clang-4.1.0,gcc-4.2.4,clang-4.2.4,gcc-4.2.5,clang-4.2.5,gcc-5.0.1,clang-5.0.1
+Name,Version,Description,gcc-3.1.5,clang-3.1.5,gcc-4.0.5,clang-4.0.5,gcc-4.0.6,clang-4.0.6,gcc-4.1.0,clang-4.1.0,gcc-4.2.5,clang-4.2.5,gcc-4.2.6,clang-4.2.6,gcc-5.0.2,clang-5.0.2
 a,2.0,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N
 a,2.1,'A' (Atomic Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 b,1.0,"'B' (the collection of the Zba, Zbb, Zbs extensions)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -14,8 +14,8 @@ i,2.0,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N
 i,2.1,'I' (Base Integer Instruction Set),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 m,2.0,'M' (Integer Multiplication and Division),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 p,0.15,'P' ('Base P' (Packed SIMD)),N,N,Y,N,Y,Y,Y,Y,Y,N,Y,N,N,N
-p,0.19,'P' ('Base P' (Packed SIMD)),N,N,N,N,N,N,N,N,N,Y,N,Y,Y,N
-p,0.21,'P' ('Base P' (Packed SIMD)),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
+p,0.19,'P' ('Base P' (Packed SIMD)),N,N,N,N,N,N,N,N,N,Y,N,Y,N,N
+p,0.21,'P' ('Base P' (Packed SIMD)),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y
 q,2.2,'Q' (Quad-Precision Floating-Point),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
 sdext,1.0,'Sdext' (External Debugging Extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 sdtrig,1.0,'Sdtrig' (Debugging Triggers),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -36,7 +36,7 @@ smdbltrp,1.0,'Smdbltrp' (Double Trap Machine Level),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 smepmp,1.0,'Smepmp' (Enhanced Physical Memory Protection),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 smmpm,1.0,'Smmpm' (Machine-level Pointer Masking for M-mode),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 smnpm,1.0,'Smnpm' (Machine-level Pointer Masking for next lower privilege mode),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
-smpmpdeleg,0.8,'Smpmpdeleg' (Sharing hardware resources between PMP and SPMP),N,N,N,N,N,N,N,N,N,N,Y,Y,N,Y
+smpmpdeleg,0.8,'Smpmpdeleg' (Sharing hardware resources between PMP and SPMP),N,N,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y
 smpmpmt,0.6,'Smpmpmt' (PMP-based Memory Types Extension),N,N,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y
 smrnmi,1.0,'Smrnmi' (Resumable Non-Maskable Interrupts),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 smstateen,1.0,'Smstateen' (Machine-mode view of the state-enable extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -54,9 +54,9 @@ ssctr,1.0,'Ssctr' (Control Transfer Records Supervisor Level),Y,Y,Y,Y,Y,Y,Y,Y,Y,
 ssdbltrp,1.0,'Ssdbltrp' (Double Trap Supervisor Level),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ssnpm,1.0,'Ssnpm' (Supervisor-level Pointer Masking for next lower privilege mode),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 sspm,1.0,'Sspm' (Indicates Supervisor-mode Pointer Masking),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
-sspmp,0.8,'Sspmp' (S-mode Physical Memory Protection),N,N,N,N,N,N,N,N,N,N,Y,Y,N,Y
-sspmp,0.9,'Sspmp' (S-mode Physical Memory Protection),N,N,Y,N,Y,Y,Y,Y,Y,Y,N,N,Y,N
-sspmpen,0.8,'Sspmpen' (Optimizing context switching of SPMP entries),N,N,N,N,N,N,N,N,N,N,Y,Y,N,Y
+sspmp,0.8,'Sspmp' (S-mode Physical Memory Protection),N,N,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y
+sspmp,0.9,'Sspmp' (S-mode Physical Memory Protection),N,N,Y,N,Y,Y,Y,Y,N,N,N,N,N,N
+sspmpen,0.8,'Sspmpen' (Optimizing context switching of SPMP entries),N,N,N,N,N,N,N,N,Y,Y,Y,Y,Y,Y
 ssqosid,1.0,'Ssqosid' (Quality-of-Service (QoS) Identifiers),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ssstateen,1.0,'Ssstateen' (Supervisor-mode view of the state-enable extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ssstrict,1.0,'Ssstrict' (No non-conforming extensions are present),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -76,7 +76,9 @@ svinval,1.0,'Svinval' (Fine-Grained Address-Translation Cache Invalidation),Y,Y,
 svnapot,1.0,'Svnapot' (NAPOT Translation Contiguity),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 svpbmt,1.0,'Svpbmt' (Page-Based Memory Types),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 svptead,1.0,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,N,N
+svrsw60t59b,1.0,'Svrsw60t59b' (PTE Reserved-for-Software Bits 60-59),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
 svukte,0.4,'Svukte' (Address-Independent Latency of User-Mode Faults to Supervisor Addresses),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+svukte,1.0,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
 svvptc,1.0,'Svvptc' (Obviating Memory-Management Instructions after Marking PTEs Valid),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 v,0.10,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N
 v,1.0,'V' (Vector Extension for Application Processors),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -195,8 +197,7 @@ zaamo,1.0,'Zaamo' (Atomic Memory Operations),Y,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zabha,1.0,'Zabha' (Byte and Halfword Atomic Memory Operations),N,Y,N,Y,N,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zacas,1.0,'Zacas' (Atomic Compare-And-Swap Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zalasr,0.1,'Zalasr' (Load-Acquire and Store-Release Instructions),N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,N
-zalasr,0.9,'Zalasr' (Load-Acquire and Store-Release Instructions),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
-zalasr,1.0,,N,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N
+zalasr,1.0,'Zalasr' (Load-Acquire and Store-Release Instructions),N,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,Y
 zalrsc,0.2,'Zalrsc' (Load-Reserved/Store-Conditional),N,Y,N,N,N,N,N,N,N,N,N,N,N,N
 zalrsc,1.0,'Zalrsc' (Load-Reserved/Store-Conditional),Y,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zama16b,1.0,"'Zama16b' (Atomic 16-byte misaligned loads, stores and AMOs)",Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -236,6 +237,7 @@ zicbop,1.0,'Zicbop' (Cache-Block Prefetch Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,
 zicboz,1.0,'Zicboz' (Cache-Block Zero Instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ziccamoa,1.0,'Ziccamoa' (Main Memory Supports All Atomics in A),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ziccamoc,1.0,'Ziccamoc' (Main Memory Supports Atomics in Zacas),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
+ziccid,1.0,'Ziccid' (Instruction/Data Coherence and Consistency),N,N,N,N,N,N,N,N,N,N,N,N,N,Y
 ziccif,1.0,'Ziccif' (Main Memory Supports Instruction Fetch with Atomicity Requirement),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zicclsm,1.0,'Zicclsm' (Main Memory Supports Misaligned Loads/Stores),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 ziccrse,1.0,'Ziccrse' (Main Memory Supports Forward Progress on LR/SC Sequences),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -253,7 +255,7 @@ zihpm,1.0,,Y,N,N,N,N,N,N,N,N,N,N,N,N,N
 zihpm,2.0,'Zihpm' (Hardware Performance Counters),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zilsd,1.0,'Zilsd' (Load/Store Pair Instructions),N,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,Y
 zimop,1.0,'Zimop' (May-Be-Operations),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
-zjid,0.0,'Zjid' (Instruction/Data Cache Synchronization),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+zjid,0.0,'Zjid' (Instruction/Data Cache Synchronization),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,N
 zk,1.0,'Zk' (Standard scalar cryptography extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zkn,1.0,'Zkn' (NIST Algorithm Suite),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zknd,1.0,'Zknd' (NIST Suite: AES Decryption),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -270,7 +272,7 @@ ztso,1.0,'Ztso' (Memory Model - Total Store Order),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvbb,1.0,'Zvbb' (Vector basic bit-manipulation instructions),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvbc,1.0,'Zvbc' (Vector Carryless Multiplication),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvbc32e,0.7,'Zvbc32e' (Vector Carryless Multiplication with 32-bits elements),N,N,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y
-zvdot4a8i,0.1,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
+zvdot4a8i,0.1,'Zvdot4a8i' (Vector 4-element Dot Product of packed 8-bit Integers),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y
 zve32d,1.0,,Y,N,N,N,N,N,N,N,N,N,N,N,N,N
 zve32f,1.0,'Zve32f' (Vector Extensions for Embedded Processors with maximal 32 EEW and F extension),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zve32x,1.0,'Zve32x' (Vector Extensions for Embedded Processors with maximal 32 EEW),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -289,9 +291,9 @@ zvfhmin,1.0,'Zvfhmin' (Vector Half-Precision Floating-Point Minimal),Y,Y,Y,Y,Y,Y
 zvfofp4min,0.1,'Zvfofp4min' (OFP4 conversion extension Zvfofp4min),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvfofp8min,0.2,'Zvfofp8min' (OFP8 conversion extension Zvfofp8min),N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvfqwbdota8f,0.2,'Zvfqwbdota8f' (OCP FP8 batched dot-product extension),N,N,N,N,N,N,Y,N,Y,N,Y,N,Y,Y
-zvfqwdota8f,0.2,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
+zvfqwdota8f,0.2,'Zvfqwdota8f' (OCP FP8 Dot-Product),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y
 zvfwbdota16bf,0.2,'Zvfwbdota16bf' (BF16 batched dot-product extension),N,N,N,N,N,N,Y,N,Y,N,Y,N,Y,Y
-zvfwdota16bf,0.2,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
+zvfwdota16bf,0.2,'Zvfwdota16bf' (BF16 Dot-Product),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y
 zvkb,0.1,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvkb,1.0,'Zvkb' (Vector Bit-manipulation used in Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvkg,0.1,'Zvkg' (Vector GCM instructions for Cryptography),Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
@@ -329,8 +331,8 @@ zvl65536b,1.0,'Zvl' (Minimum Vector Length) 65536,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvl8192b,1.0,'Zvl' (Minimum Vector Length) 8192,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
 zvlsseg,0.10,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N
 zvlsseg,1.0,,Y,N,Y,N,Y,N,Y,N,Y,N,Y,N,N,N
-zvqdotq,0.0,'Zvqdotq' (Vector quad widening 4D Dot Product),N,N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y
+zvqdotq,0.0,'Zvqdotq' (Vector quad widening 4D Dot Product),N,N,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,N
 zvqwbdota16i,0.2,'Zvqwbdota16i' (16-bit integer batched dot-product extension),N,N,N,N,N,N,Y,N,Y,N,Y,N,Y,Y
 zvqwbdota8i,0.2,'Zvqwbdota8i' (8-bit integer batched dot-product extension),N,N,N,N,N,N,Y,N,Y,N,Y,N,Y,Y
-zvqwdota16i,0.2,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
-zvqwdota8i,0.2,,N,N,N,N,N,N,N,N,N,N,N,N,Y,N
+zvqwdota16i,0.2,'Zvqwdota16i' (16-bit Integer Dot-Product),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y
+zvqwdota8i,0.2,'Zvqwdota8i' (8-bit Integer Dot-Product),N,N,N,N,N,N,N,N,N,N,N,N,Y,Y

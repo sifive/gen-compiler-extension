@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Keep Clang's -mcpu classification consistent with aggregation of cached lists.
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/mcpu_target_policy.sh"
+
 # Default configuration
 OUTPUT_FILE="mcpu_list.csv"
 VERBOSE=0
@@ -185,8 +189,15 @@ extract_mcpu_values() {
         return 1
     fi
     
-    # Return the values
-    echo "$mcpu_values"
+    # Exclude CPU names owned by other vendors from this SiFive report.
+    local cpu
+    while IFS= read -r cpu; do
+        if mcpu_is_non_sifive_vendor "$cpu"; then
+            verbose_echo "Ignoring non-SiFive vendor CPU: $cpu"
+            continue
+        fi
+        echo "$cpu"
+    done <<< "$mcpu_values"
     return 0
 }
 
@@ -275,8 +286,20 @@ extract_clang_mcpu_values() {
         return 1
     fi
     
-    # Return the values
-    echo "$mcpu_values"
+    # The help catalog also lists some tune-only names as CPUs. Exclude only
+    # the aliases confirmed by the shared target policy above.
+    local cpu
+    while IFS= read -r cpu; do
+        if mcpu_is_non_sifive_vendor "$cpu"; then
+            verbose_echo "Ignoring non-SiFive vendor CPU: $cpu"
+            continue
+        fi
+        if clang_mcpu_is_tune_only "$cpu"; then
+            verbose_echo "Ignoring tune-only Clang CPU alias: $cpu"
+            continue
+        fi
+        echo "$cpu"
+    done <<< "$mcpu_values"
     return 0
 }
 

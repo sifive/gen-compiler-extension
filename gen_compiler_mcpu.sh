@@ -2,6 +2,7 @@
 
 # Load toolchain configuration
 source "$(dirname "$0")/toolchain_config.sh"
+source "$(dirname "$0")/mcpu_target_policy.sh"
 
 # Default configuration
 OUTPUT_DIR="mcpu_lists"
@@ -163,9 +164,19 @@ generate_version_comparison() {
     echo "" >> "$comparison_file"
     
     # Process each CPU
-    while read -r cpu; do
-        echo -n "$cpu" >> "$comparison_file"
-        
+    while IFS= read -r cpu; do
+        # Cached per-version lists may still contain non-SiFive vendor CPUs.
+        if mcpu_is_non_sifive_vendor "$cpu"; then
+            continue
+        fi
+
+        # A CPU can be present in the saved lists only because Clang's help
+        # catalog includes a tune-only alias. Keep it only if some compiler
+        # still reports support after applying the shared Clang policy.
+        [ -n "$cpu" ] || continue
+        local has_support=0
+        local row=""
+
         # Check each version
         for version in "${VERSIONS[@]}"; do
             local gcc_mark=""
@@ -173,20 +184,29 @@ generate_version_comparison() {
             
             if [ -f "$output_dir/$version/mcpu_list.csv" ]; then
                 # Check if this CPU is supported by GCC in this version
-                if grep -q "^$cpu,X," "$output_dir/$version/mcpu_list.csv"; then
+                if awk -F, -v cpu="$cpu" '$1 == cpu && $2 == "X" { found=1 } END { exit !found }' \
+                    "$output_dir/$version/mcpu_list.csv"; then
                     gcc_mark="X"
+                    has_support=1
                 fi
                 
-                # Check if this CPU is supported by Clang in this version
-                if grep -q "^$cpu,.*,X$" "$output_dir/$version/mcpu_list.csv"; then
+                # The help catalog contains names accepted by -mtune only.
+                # Clear those cached Clang marks as well as filtering them at
+                # extraction time, while leaving any GCC mark intact.
+                if ! clang_mcpu_is_tune_only "$cpu" && \
+                    awk -F, -v cpu="$cpu" '$1 == cpu && $3 == "X" { found=1 } END { exit !found }' \
+                        "$output_dir/$version/mcpu_list.csv"; then
                     clang_mark="X"
+                    has_support=1
                 fi
             fi
             
-            echo -n ",$gcc_mark,$clang_mark" >> "$comparison_file"
+            row="$row,$gcc_mark,$clang_mark"
         done
         
-        echo "" >> "$comparison_file"
+        if [ "$has_support" -eq 1 ]; then
+            echo "$cpu$row" >> "$comparison_file"
+        fi
     done < "$unique_cpus_file"
     
     # Clean up

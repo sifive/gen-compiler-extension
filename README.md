@@ -179,6 +179,12 @@ mcpu_lists/
 └── compiler-mcpu.xlsx  # Excel version with conditional formatting
 ```
 
+### CPU Support Semantics
+
+The comparison report marks CPUs accepted by each compiler's `-mcpu` option. Clang's help catalog can also list names that are accepted by `-mtune` but rejected by `-mcpu`; the report filters the confirmed tune-only SiFive series aliases. Fresh extraction and cached-list aggregation also omit non-SiFive vendor CPUs, including Andes, MIPS, SpacemiT, Syntacore, T-Head, Tenstorrent (`tt`), Veyron, XiangShan, and Raspberry Pi RP2350 targets.
+
+The comparison generator leaves per-version CSV snapshots unchanged, so older `clang_mcpu.csv` and `mcpu_list.csv` files can still contain tune-only aliases and non-SiFive vendor CPUs. Use `./gen_compiler_mcpu.sh --force` to refresh those snapshots with the configured toolchains.
+
 ---
 
 ## 📊 Excel Output Features
@@ -226,5 +232,3 @@ To add or modify versions, edit the `TOOLCHAIN_VERSIONS` array in `toolchain_con
 - Error handling is included for missing compilers or failed module loads
 - Both GCC and Clang outputs are processed and compared
 - Excel conversion requires `pandas` and `openpyxl` Python packages
-
-

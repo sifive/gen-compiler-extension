@@ -75,7 +75,6 @@ syntacore-scr4-rv64,,X
 syntacore-scr5-rv32,,X
 syntacore-scr5-rv64,,X
 syntacore-scr7,,X
-thead-c906,X,
 tt-ascalon-d8,,X
 veyron-v1,,X
-xiangshan-nanhu,X,X
+xiangshan-nanhu,,X

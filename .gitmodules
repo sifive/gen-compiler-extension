@@ -1,0 +1,3 @@
+[submodule ".ai-harness"]
+	path = .ai-harness
+	url = git@github.com:issuehsu/ai-harness.git
